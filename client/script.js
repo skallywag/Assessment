@@ -156,14 +156,13 @@ zipBtn.addEventListener('click', (e) => {
 
     axios.get(`https://api.weatherapi.com/v1/current.json?key=77781fb0f0734297b2603939211512&q=${zipCode}&aqi=no`)
     .then(res => {
-        console.log(res.data);
-        
-        // const iconSrc = res.data.current.condition.icon
-    
-        console.log(iconImg);
+        // console.log(res.data);
+        let iconSrc = res.data.current.condition.icon
         const location = res.data.location.name
-        const tempNum = res.data.current.temp_f
-    
+            let tempNum = res.data.current.temp_f
+         let tempInt = Math.ceil(tempNum)
+        // console.log(iconSrc);   
+        // console.log(iconImg);
 
         document.getElementById('temp-card')
         const li = document.createElement('li')
@@ -171,10 +170,10 @@ zipBtn.addEventListener('click', (e) => {
         const cardContent =  
         `<div class="temp-card">
         <h1 class="location">${location}</h1>
-        <span class="city-temp">${tempNum}</span><sup class="degree">°F</sup></div>
-        <img src="{}" alt="">`
-        
-                                     
+        <span class="city-temp">${tempInt}</span><sup class="degree">°F</sup>
+        <img src="http:${iconSrc}" alt="">
+        </div>`
+                                      
         li.innerHTML = cardContent
         document.getElementById('weather-list').appendChild(li)
     })
