@@ -158,7 +158,7 @@ zipBtn.addEventListener('click', (e) => {
     .then(res => {
         console.log(res.data);
         
-        const iconSrc = res.data.current.condition.icon
+        // const iconSrc = res.data.current.condition.icon
     
         console.log(iconImg);
         const location = res.data.location.name
