@@ -1,0 +1,214 @@
+.nav-con {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-color: black;
+    height: 100px;
+    /* opacity: 90%; */
+    margin-bottom: 15px;
+    /* position: relative; */
+}
+
+.nav-btn {
+    margin-right: 50px;
+}
+
+.form-span {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+/* .login-con.form {
+    display: block;
+    text-align: center;
+} */
+
+.form-con {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    line-height: 25px;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 5px  lightslategrey;
+    z-index: 3;
+    margin-right: 30vw;
+    margin-top:88vh;
+    background-color: darkgray;
+    /* opacity: 95%; */
+    position: fixed;
+
+}
+
+.login-con {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: darkgray;
+    width: 30%;
+    padding: 50px;
+    border-radius: 8px;
+    /* opacity: 90%; */
+    z-index: 2;
+    margin-right: 30vw;
+    margin-top:60vh;
+    position: fixed;
+}
+
+.input {
+    border-style:solid;
+    height: 40px;
+    font-size: 15px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border-color: tomato;
+    background-color: lightgray;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 700;
+    font-size: 20px;  
+}
+
+.form-btn {
+    background-color: tomato;
+    border-style: none;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    width: 100px;
+    border: 3px solid tomato;
+    cursor: pointer;
+    font-size: 20px;
+    color: aqua;
+}
+
+.signup-btn:hover {
+    background-color: aqua;
+    color: tomato;
+}
+
+.label {
+    font-size: 20px;
+    font-family: fantasy;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.login-btn {
+    height: 50px;
+    width: 100px;
+    border-radius: 10px;
+    border: 3px white;
+    color: white;
+    background: none;
+    border-style: solid;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.signup-btn {
+    height: 50px;
+    width: 100px;
+    margin-left: 25px;
+    margin-right: 60px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border-style: none;
+}
+
+.main-con {
+   /* margin-bottom: -100; */
+}
+
+#background-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  
+  .temp-con {
+      margin-left: 30px;
+  }
+
+  #zip-code {
+    font-size: 20px;
+    width: 120px;
+    border-style: none;
+    opacity: 30%;
+    height: 30px;
+    border-radius: 5px;
+  }
+ 
+
+  .zip-label {
+    color: azure;
+    font-size: 60px;
+    font-family: monospace;
+  }
+
+  #zip-btn {
+      /* opacity: 10%; */
+      font-size: 22px;
+      background-color: transparent;
+      border: solid 2px;
+      border-radius: 5px;
+      color: lightblue;
+      margin-left: 5px;
+  }
+  #zip-btn:hover {
+      color: darkgray;
+      cursor: pointer;
+  }
+
+  .close {
+      background-color: black;
+      color: white;
+        position: absolute;
+        top: 15px; right: 15px;
+        border-radius: 360px;
+        border-style: none;
+  }
+  .weather-con {
+      display: flex;
+      margin-left: 20px;
+      background-color: white;
+      height: 50px;
+
+  }
+
+  .temp-card {
+      height: 20vh;
+      width: 15vw;
+      background-color: gray;
+      opacity: 80%;
+      border-radius: 15px;
+      padding: 20px;
+      margin: 20px;
+      z-index: -1;
+  }
+  .location {
+      color: lightskyblue;
+      font-size: 25px;
+  }
+
+  .city-temp {
+      font-size: 80px;
+      font-family: sans-serif;
+  }
+
+  .degree {
+      font-size: 30px;
+  }
+

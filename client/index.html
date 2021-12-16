@@ -1,0 +1,109 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/helper.css">
+        <link rel="stylesheet" href="./css/styles.css">
+        <link rel="stylesheet" href="./reset.css">
+        <script src="https://kit.fontawesome.com/7059431f06.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <title>Login Form</title>
+    </head>
+<body>
+        
+    <section class="nav-con">
+                <button class="login-btn" onclick="showLogin()">Login</button>
+                <button class="signup-btn" onclick="showSignUp()">Sign up</button>
+        <section class="login-con" style="display: none;">
+
+            <button type="click" class="close" onclick="closeForm()">X</button>
+            <form id="login-form">
+
+                <div id="err"></div>
+                    <div id="errLogin"></div>
+        
+                <label class="label" for="login-email"></label>
+                    <div>
+                        <input class="input" id="login-email" name="login-email" type="email" placeholder=" &#xf007; Email">
+                    </div>
+    
+                <label class="label" for="password"></label>
+                    <div>
+                        <input class="input" id="login-pass" name="password" type="password" placeholder=" &#xf13e; Pass">
+                    </div>
+                    <div>
+                        <button class="form-btn">Login</button>
+                    </div>     
+            </form>
+        </section>
+    
+        <section class="form-con" style="display: none;">
+                <div id="err"></div>
+                    <span class="form-span">Create Account</span>
+                         <button type="click" class="close" onclick="closeForm()">X</button>
+            
+            <form id="create-form">
+                <label class="label" for="name">Name</label>
+                    <div>
+                        <input class="input" id="name" name="name" type="text" placeholder=" &#xf007;">
+                        <div id="errName"></div>
+                    </div>
+    
+                <label class="label" for="username">Username</label>
+                    <div>
+                        <input class="input" id="username" name="username" type="text" placeholder=" &#xf21b;">
+                        <div id="errUsername"></div>
+                    </div>
+    
+                <label class="label" for="email">Email</label>
+                    <div>
+                        <input class="input" id="email" name="email" type="text" placeholder=" &#xf1fa;">
+                        <div id="errEmail"></div>
+                    </div>
+    
+                <label class="label" for="password">Password</label>
+                    <div>
+                        <input class="input" id="password" name="password" type="password" placeholder=" &#xf13e;">
+                        <div id="errPassword"></div>
+                    </div>
+    
+                <label class="label" for="confirm-pass">Comfirm Password</label>
+                    <div>
+                        <input class="input" id="pass-confirm" name="confirm-pass" type="password" placeholder=" &#Xf023;">
+                        <div id="errConfirm"></div>
+                    </div>
+                    <div>
+                        <button class="form-btn" type="submit">Submit</button>     
+                    </div>
+            </form> 
+        </section>
+    </section>
+
+    <section class="main-con">
+        <video id="background-video" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
+            <source src="./pictures/production ID_4478322.mp4" type="video/mp4">
+        </video>
+            <div class="temp-con">
+                <div>
+                    <label class="zip-label" for="zip-code">Enter a zip code</label>
+                </div>
+                <div>
+                    <input id="zip-code" placeholder="zipcode" name="zip-code" type="text">
+                      <button id="zip-btn">search</button>
+                </div>
+            </div>
+
+            <div>
+                <ul id="weather-list" class="d-flex">
+                    <li onclick="deleteCard()"></li>
+                </ul>  
+            </div>
+    </section>
+</body>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./script.js"></script>
+</html>
+
+<!-- <sup>°F</sup> -->
