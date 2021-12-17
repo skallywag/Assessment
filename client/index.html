@@ -13,13 +13,16 @@
     </head>
 <body>  
     <section class="nav-con">
-                <button class="login-btn" onclick="showLogin()">Login</button>
-                <button class="signup-btn" onclick="showSignUp()">Sign up</button>
-        <section class="login-con" style="display: none;">
+        <div>
+            <button class="login-btn" onclick="showLogin()">Login</button>
+            <button class="signup-btn" onclick="showSignUp()">Sign up</button>
+        </div>
 
-            <button type="click" class="close" onclick="closeForm()">X</button>
-            <form id="login-form">
-
+        <div class="login-con" style="display: none;">
+            <div>
+                <button type="click" class="close" onclick="closeForm()">X</button>
+                <form id="login-form">
+            </div>
                 <div id="err"></div>
                     <div id="errLogin"></div>
         
@@ -36,9 +39,9 @@
                         <button class="form-btn">Login</button>
                     </div>     
             </form>
-        </section>
+        </div>
     
-        <section class="form-con" style="display: none;">
+        <div class="form-con" style="display: none;">
             <div id="err"></div>
 
             <span class="form-span">Create Account</span>
@@ -79,21 +82,22 @@
                         <div id="success" style="display: none;">Account Created!!</div>
                     </div>
             </form> 
-        </section>
+        </div>
     </section>
 
-    <section class="main-con">
+    <div class="video-wrapper">
         <video id="background-video" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
             <source src="./pictures/production ID_4478322.mp4" type="video/mp4">
         </video>
-            <div class="temp-con">
-                <div>
-                    <label class="zip-label" for="zip-code">Enter a zip code</label>
-                </div>
-                <div>
-                    <input id="zip-code" placeholder="zipcode" name="zip-code" type="text">
-                      <button id="zip-btn">search</button>
-                </div>
+
+        <div class="temp-con">
+            <div>
+                <label class="zip-label" for="zip-code">Enter a zip code</label>
+            </div>
+
+            <div>
+                <input id="zip-code" placeholder="zipcode" name="zip-code" type="text">
+                <button id="zip-btn">search</button>
             </div>
 
             <div class="card-con">
@@ -101,7 +105,20 @@
                     <li onclick="deleteCard()"></li>
                 </ul>  
             </div>
-    </section>
+        </div>
+    </div>
+
+    <div>
+        <h1>hello</h1>
+    </div>
+
+
+    
+   
+
+
+   
+   
 </body>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./script.js"></script>
