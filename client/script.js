@@ -12,7 +12,6 @@ const tempCard = document.getElementById('temp-card')
 
 
 function closeForm(){
-
     const createForm = document.querySelector('.form-con')
     if (createForm.style.display === 'flex'){
         createForm.style.display = 'none'
@@ -56,11 +55,14 @@ createForm.addEventListener('submit', (e) => {
         document.getElementById('password').value = ''
         document.getElementById('pass-confirm').value = ''
 
-        const success = document.createElement('h1')
-        success.textContent = 'Account Created!'
-        document.body.append(success) 
+    
+        const success = document.getElementById('success')
+        console.log(success);
+        if(success.style.display === 'none'){
+            success.style.display = 'flex'
+        }
         
-
+        
         axios.post('http://localhost:5432/api/users', {name, username, email, password})
         .then(console.log('success'))
         .catch(err => console.log(err))
