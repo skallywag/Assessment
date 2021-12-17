@@ -15,12 +15,12 @@ const sequelize = new Sequelize(CONNECTION_STRING, {
 
 module.exports = {
 
-    createUser: (req, res1) => {
+    createUser: (req, res) => {
         const {name, username, email, password} = req.body
         sequelize.query(`INSERT INTO users(name, username, email, password)
         VALUES ('${name}', '${username}', '${email}', '${password}');`)
-        .then(res1 => res.status(200).send('Success!'))
-        .catch(err => console.log(err))
+
+        res.status(200).send('user created')
     },
 
     userLogin: (req, res) => {
