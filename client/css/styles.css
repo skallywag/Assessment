@@ -79,8 +79,10 @@
 }
 
 .signup-btn:hover {
-    background-color: aqua;
-    color: tomato;
+    background-color: black;
+    color: white;
+    border: white 3px;
+    border-style: solid;
 }
 
 .label {
@@ -215,6 +217,10 @@
       z-index: -1;
       /* margin-left: 30px; */
   }
+
+.weather-hover {
+    cursor: pointer;
+}
   .location {
       color: lightskyblue;
       font-size: 25px;
@@ -231,8 +237,15 @@
 
   .card-con {
       display: flex;
-      
+
   }
+
+  .zip-con {
+      margin-bottom: 20px;
+  }
+  
+
+
 
 
  

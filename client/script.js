@@ -64,8 +64,9 @@ createForm.addEventListener('submit', (e) => {
         
         
         axios.post('http://localhost:5432/api/users', {name, username, email, password})
-        .then(console.log('success'))
-        .catch(err => console.log(err))
+        .then(res => {
+            console.log(res)
+        })
     }
 })
 
@@ -161,24 +162,36 @@ zipBtn.addEventListener('click', (e) => {
         // console.log(res.data);
         let iconSrc = res.data.current.condition.icon
         const location = res.data.location.name
-            let tempNum = res.data.current.temp_f
-         let tempInt = Math.ceil(tempNum)
+        let tempNum = res.data.current.temp_f
+         let tempInt = Math.round(tempNum)
         // console.log(iconSrc);   
         // console.log(iconImg);
 
-        document.getElementById('temp-card')
-        const li = document.createElement('li')
+        // document.getElementById('temp-card')
+        let li = document.createElement('li')
+
+        // const ul = document.getElementById('parent')
         
         const cardContent =  
-        `<div class="temp-card">
+        `<li class="temp-card">
         <h1 class="location">${location}</h1>
         <span class="city-temp">${tempInt}</span><sup class="degree">°F</sup>
         <img src="http:${iconSrc}" alt="">
-        </div>`
-                                      
+    </li>`
+                    
         li.innerHTML = cardContent
-        document.getElementById('weather-list').appendChild(li)
+        // document.getElementById('weather-list').appendChild(li)
+        document.getElementById('parent').appendChild(li)
+
+        
+        const deleteCard = document.getElementById('parent')
+        deleteCard.classList.add('weather-hover')
+        deleteCard.addEventListener('click', (e) => {
+            e.target.parentNode.remove()
+        })
+  
     })
 })
+
 
 
