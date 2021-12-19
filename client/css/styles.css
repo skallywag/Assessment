@@ -1,11 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 .nav-con {
     display: flex;
     justify-content: end;
+    /* justify-content: space-between; */
     align-items: center;
     background-color: black;
     height: 100px;
     /* opacity: 90%; */
     /* position: relative; */
+}
+
+.header-title {
+    color: #C1440D;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Righteous', cursive;
 }
 
 .nav-btn {
@@ -63,7 +72,10 @@
     font-family: 'Font Awesome 5 Free';
     font-weight: 700;
     font-size: 20px;  
+    outline:none;
 }
+
+
 
 .form-btn {
     background-color: tomato;
@@ -177,10 +189,12 @@
       border-radius: 5px;
       color: lightblue;
       margin-left: 5px;
+      transition: color 1s ease-in-out;
   }
   #zip-btn:hover {
       color: darkgray;
       cursor: pointer;
+      
   }
 
   .close {

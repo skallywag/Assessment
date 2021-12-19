@@ -127,10 +127,7 @@ loginForm.addEventListener('submit', (e) => {
         
         axios.post('http://localhost:5432/api/login', {loginEmail, loginPass})
         .then((req, res) => {
-           
-            if(req.data === ''){
-                console.log('user not found');
-            }
+           console.log(req.data)
 
         })
         .catch(err => console.log(err))
@@ -140,14 +137,13 @@ loginForm.addEventListener('submit', (e) => {
 function loginValid(input){
     let errors = {}
     if(input.loginEmail === '' || input.loginPass === ''){
-        errors.loginEmail = '<span class="error">Invalid inputs</span>'
+        errors.loginEmail = '<span class="error">Invalid input/s</span>'
         document.getElementById('errLogin').innerHTML = errors.loginEmail
     }
 
     if(Object.keys(errors).length === 0) return true
     console.log(errors)
     return false
-
 }
 
 
@@ -164,7 +160,7 @@ zipBtn.addEventListener('click', (e) => {
         const location = res.data.location.name
         let tempNum = res.data.current.temp_f
          let tempInt = Math.round(tempNum)
-        // console.log(iconSrc);   
+        // console.log(iconSrc);  
         // console.log(iconImg);
 
         // document.getElementById('temp-card')
@@ -174,10 +170,10 @@ zipBtn.addEventListener('click', (e) => {
         
         const cardContent =  
         `<li class="temp-card">
-        <h1 class="location">${location}</h1>
-        <span class="city-temp">${tempInt}</span><sup class="degree">°F</sup>
-        <img src="http:${iconSrc}" alt="">
-    </li>`
+            <h1 class="location">${location}</h1>
+            <span class="city-temp">${tempInt}</span><sup class="degree">°F</sup>
+            <img src="http:${iconSrc}" alt="weather-icon">
+        </li>`
                     
         li.innerHTML = cardContent
         // document.getElementById('weather-list').appendChild(li)
@@ -189,7 +185,6 @@ zipBtn.addEventListener('click', (e) => {
         deleteCard.addEventListener('click', (e) => {
             e.target.parentNode.remove()
         })
-  
     })
 })
 
