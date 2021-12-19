@@ -1,13 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+html * {
+    font-family: 'Righteous', cursive;
+}
+
 .nav-con {
     display: flex;
     justify-content: end;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     align-items: center;
     background-color: black;
     height: 100px;
     /* opacity: 90%; */
     /* position: relative; */
+    
 }
 
 .header-title {
@@ -15,6 +20,7 @@
     font-size: 25px;
     font-weight: bold;
     font-family: 'Righteous', cursive;
+    margin-left: 50px;
 }
 
 .nav-btn {
@@ -24,6 +30,7 @@
 .form-span {
     font-size: 40px;
     margin-bottom: 15px;
+    font-family: 'Righteous', cursive;
 }
 
 .form-con {
@@ -37,10 +44,10 @@
     border-radius: 10px;
     box-shadow: 5px  lightslategrey;
     z-index: 3;
-    margin-right: 30vw;
+    margin-left: 32vw;
     margin-top:88vh;
     background-color: darkgray;
-    /* opacity: 95%; */
+    /* opacity: 90%; */
     position: fixed;
 
 }
@@ -56,7 +63,7 @@
     border-radius: 8px;
     /* opacity: 90%; */
     z-index: 2;
-    margin-right: 30vw;
+    margin-left: 32vw;
     margin-top:60vh;
     position: fixed;
 }
@@ -64,30 +71,30 @@
 .input {
     border-style:solid;
     height: 40px;
-    font-size: 15px;
     margin-bottom: 10px;
     border-radius: 6px;
-    border-color: tomato;
+    background-color: #C1440D;
     background-color: lightgray;
-    font-family: 'Font Awesome 5 Free';
     font-weight: 700;
     font-size: 20px;  
     outline:none;
+    font-family: "Font Awesome 5 Free";
+    border-color: #C1440D;
 }
 
 
 
 .form-btn {
-    background-color: tomato;
+    background-color:#C1440D;
     border-style: none;
     padding: 10px;
     margin-top: 15px;
     border-radius: 5px;
     width: 100px;
-    border: 3px solid tomato;
+    /* border: 3px solid skyblue; */
     cursor: pointer;
     font-size: 20px;
-    color: aqua;
+    color: skyblue;
 }
 
 .signup-btn:hover {
@@ -99,7 +106,7 @@
 
 .label {
     font-size: 20px;
-    font-family: fantasy;
+    font-family: 'Righteous', cursive;
 }
 
 .error {
@@ -166,24 +173,25 @@
   }
 
   #zip-code {
-    font-size: 20px;
+    font-size: 30px;
     width: 120px;
     border-style: none;
     opacity: 30%;
-    height: 30px;
+    height: 48px;
     border-radius: 5px;
   }
  
 
   .zip-label {
     color: azure;
-    font-size: 60px;
-    font-family: monospace;
+    font-size: 80px;
+    font-family: 'Righteous', cursive;
+    margin-bottom: 20px;
   }
 
   #zip-btn {
       /* opacity: 10%; */
-      font-size: 22px;
+      font-size: 35px;
       background-color: transparent;
       border: solid 2px;
       border-radius: 5px;
@@ -207,7 +215,7 @@
   }
 
   .close:hover {
-      background-color: tomato;
+      background-color: #C1440D;
       cursor: pointer;
   }
   .weather-con {
@@ -215,7 +223,7 @@
       margin-left: 20px;
       background-color: white;
       height: 50px;
-
+      font-family: 'Righteous', cursive;
   }
 
   .temp-card {
@@ -238,11 +246,12 @@
   .location {
       color: lightskyblue;
       font-size: 25px;
+      font-family: 'Righteous', cursive;
   }
 
   .city-temp {
       font-size: 80px;
-      font-family: sans-serif;
+      font-family: 'Righteous', cursive;
   }
 
   .degree {
@@ -256,6 +265,7 @@
 
   .zip-con {
       margin-bottom: 20px;
+      display: flex;
   }
   
 
