@@ -172,6 +172,8 @@ zipBtn.addEventListener('click', (e) => {
             <h1 class="location">${location}</h1>
             <span class="city-temp">${tempInt}</span><sup class="degree">°F</sup>
             <img src="http:${iconSrc}" alt="weather-icon">
+            <div class="background">
+            </div>
         </li>`
                     
         li.innerHTML = cardContent
@@ -186,6 +188,8 @@ zipBtn.addEventListener('click', (e) => {
         })
     })
 })
+
+
 
 
 

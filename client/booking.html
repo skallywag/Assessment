@@ -1,20 +1,24 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./css/helper.css">
-        <link rel="stylesheet" href="./css/styles.css">
-        <link rel="stylesheet" href="./reset.css">
-        <script src="https://kit.fontawesome.com/7059431f06.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <title>Mars-X</title>
-    </head>
-<body>  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="html" href="./index.html">
+    <link rel="stylesheet" href="./css/helper.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./reset.css">
+    <script src="https://kit.fontawesome.com/7059431f06.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Booking</title>
+</head>
+
+<body>
+    
     <section id="sticky" class="nav-con">
         <div class="header-title">Trip to Mars</div>
         <div>
+            <a class="crumb" href="./index.html">Home</a>
             <button class="login-btn" onclick="showLogin()">Login</button>
             <button class="signup-btn" onclick="showSignUp()">Sign up</button>
         </div>
@@ -86,75 +90,8 @@
         </div>
     </section>
 
-    <div class="video-wrapper">
-        <video id="background-video" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
-            <source src="./pictures/production ID_4478322.mp4" type="video/mp4">
-        </video>
-
-        <div class="temp-con">
-            <div class="zip-label">
-                <label class="zip-label" for="zip-code">Enter a zip code</label>
-            </div>
-
-            <div class="zip-con">
-                <input id="zip-code" placeholder="zipcode" name="zip-code" type="text">
-                <button id="zip-btn">search</button>
-            </div>
-           
-            <div class="card-con">
-                <ul  class="d-flex" id="parent">
-                </ul>  
-            </div>
-        </div>
-    </div>
-  
-    <section class="explore-con">
-        <div>
-            <img class="mars-background" src="./pictures/mars_why.webp" alt="">
-        </div>
-
-        <div class="about-con">
-            <div>
-                <h1 class="title">Explore Mars</h1>
-            </div>
-
-        <div class="mars">
-            <div class="list">
-                <ul>
-                    <li class="mars-list">Age</li>
-                    <li class="mars-list">Diameter</li>
-                    <li class="mars-list">Day length</li>
-                    <li class="mars-list">Avg distance from earth</li>
-                    <li class="mars-list">Gravity force</li>
-                </ul>
-                <ul class="right">
-                    <li class="mars-list">4.5 Billion years</li>
-                    <li class="mars-list">4,220 mi</li>
-                    <li class="mars-list">24 hrs 38 min</li>
-                    <li class="mars-list">140M mi</li>
-                    <li class="mars-list">38% of earth</li>
-                </ul>
-            </div>
-            <div>
-                <a href="./booking.html"><button class="book-btn" id="book-btn">Book Trip</button></a>
-            </div>
-        </div>
-    </section>
-
-    
-
-
-
-
-
-
-
-
-   
-   
+    <section class="back"></section>
 </body>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./script.js"></script>
 </html>
-
-<!-- <sup>°F</sup> -->

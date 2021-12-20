@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Staatliches&display=swap');
 html * {
     font-family: 'Righteous', cursive;
 }
@@ -11,8 +12,10 @@ html * {
     background-color: black;
     height: 100px;
     /* opacity: 90%; */
-    /* position: relative; */
-    
+    position: relative;
+    /* position: fixed; */
+    /* z-index: 5; */
+    /* width: 100%;   */
 }
 
 .header-title {
@@ -153,7 +156,7 @@ html * {
     be relative to this element */
     position: relative;
     width: 100vw;
-    height: 80vh;
+    height:100vh;
   
     /* Will not allow the video to overflow the 
     container */
@@ -187,6 +190,7 @@ html * {
     font-size: 80px;
     font-family: 'Righteous', cursive;
     margin-bottom: 20px;
+    margin-top: 20px;
   }
 
   #zip-btn {
@@ -200,7 +204,7 @@ html * {
       transition: color 1s ease-in-out;
   }
   #zip-btn:hover {
-      color: darkgray;
+      color: #C1440D;
       cursor: pointer;
       
   }
@@ -240,9 +244,24 @@ html * {
       /* margin-left: 30px; */
   }
 
-.weather-hover {
-    cursor: pointer;
+.temp-card:hover {
+      cursor: pointer;
+        /* background-color: #C1440D; */
+        background-image: 
+         linear-gradient(to top left,
+             rgba(0,0,0,0) 0%,
+             rgba(0,0,0,0) calc(50% - 1.0px),
+             hsl(12, 88%, 30%) 50%,
+             rgba(0,0,0,0) calc(50% + 1.0px),
+             rgba(0,0,0,0) 100%),
+         linear-gradient(to top right,
+             rgba(0,0,0,0) 0%,
+             rgba(0,0,0,0) calc(50% - 0.8px),
+             rgb(148, 41, 14) 50%,
+             rgba(0,0,0,0) calc(50% + 0.8px),
+             rgba(0,0,0,0) 100%);
 }
+  
   .location {
       color: lightskyblue;
       font-size: 25px;
@@ -268,6 +287,84 @@ html * {
       display: flex;
   }
   
+  .explore-con {
+      position: relative;
+      width: 100vw;
+      height:100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: end;
+    }
+    
+    .mars-background {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    
+    .title {
+        font-size: 90px;
+        margin-bottom: 30px;
+        font-family: 'Staatliches'
+    }
+
+    .about-con {
+        display: flex;
+        flex-direction: column;
+        justify-content:left;
+        color: white;
+        margin-right: 150px;
+        margin-top: 90px;
+        align-items: center;   
+    }
+
+    .mars {
+        /* width: 100%; */
+    }
+
+    .list {
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 80px;
+    }
+    .mars-list {
+        border-bottom: 1px solid white ;
+        line-height: 40px;
+        font-size: 20px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .right {
+        text-align: right;
+    }
+
+    .book-btn {
+        font-size: 30px;
+        height: 60px;
+        border: 3px white solid;
+        background-color: black;
+        color: white;
+    }
+
+    .book-btn:hover {
+        cursor: pointer;
+        transition: ease-in-out .4s;
+        color:#C1440D;
+    }
+
+    .back {
+        background-color: #C1440D;
+        height: 100vh;
+    }
+
+    .crumb {
+        color: white;
+        margin-right: 15px;
+        font-size: 20px;
+    }
 
 
 
