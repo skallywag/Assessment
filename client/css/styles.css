@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Staatliches&display=swap');
+body {
+    font-family: 'Righteous', cursive;
+}
 html * {
     font-family: 'Righteous', cursive;
 }
@@ -365,6 +368,77 @@ html * {
         margin-right: 15px;
         font-size: 20px;
     }
+
+    .crumb:hover {
+        color: #C1440D;
+    }
+
+    .title {
+        color: white;
+    }
+
+    .booking-con {
+        position: relative;
+        width: 100vw;
+        height:100vh;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+    }
+      
+    .book-background {
+          object-fit: cover;
+          height: 100%;
+          width: 100%;
+          position: fixed;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          opacity: 95%;
+    }
+
+    .booking-h1 {
+        color: white;
+        font-size: 90px;
+    }
+    .booking-h2 {
+        color: white;
+        font-size: 30px;
+    }
+
+    .booking-con {
+        margin-top: 40px;
+        text-align: center;
+        font-family: 'Righteous', cursive;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .footer {
+        background-color: darkgray;
+        height: 30vh;
+    }
+
+   
 
 
 
