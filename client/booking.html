@@ -8,15 +8,16 @@
     <link rel="stylesheet" href="./css/helper.css">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="/js-calendar-main/app.css" />
     <script src="https://kit.fontawesome.com/7059431f06.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Booking</title>
 </head>
 
-<body>
+<body class="light">
     
     <section id="sticky" class="nav-con">
-        <div class="header-title">Trip to Mars</div>
+        <a style="text-decoration: none;" href="./index.html"><div class="header-title">Trip to Mars</div></a>
         <div>
             <a class="crumb" href="./index.html">Home</a>
             <button class="login-btn" onclick="showLogin()">Login</button>
@@ -96,13 +97,47 @@
                 <h1 class="booking-h1">Mars Awaits</h1>
                 <h2 class="booking-h2">Book Your Trip Today!</h2>
             </div>
-            <div>
-               
-            </div>
-
-
+            <button id="cal-btn">Select Dates</button>
+            <div id="cal-con" style="display: none;">
+                <div  id="calendar" class="calendar">
+                    <div class="calendar-header">
+                      <span class="month-picker" id="month-picker">February</span>
+                      <div class="year-picker">
+                        <span class="year-change" id="prev-year">
+                          <pre><</pre>
+                        </span>
+                        <span id="year">2021</span>
+                        <span class="year-change" id="next-year">
+                          <pre>></pre>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="calendar-body">
+                      <div class="calendar-week-day">
+                        <div>Sun</div>
+                        <div>Mon</div>
+                        <div>Tue</div>
+                        <div>Wed</div>
+                        <div>Thu</div>
+                        <div>Fri</div>
+                        <div>Sat</div>
+                      </div>
+                      <div class="calendar-days"></div>
+                    </div>
+                    <div class="calendar-footer">
+                      <div class="toggle">
+                        <span>Dark Mode</span>
+                        <div class="dark-mode-switch">
+                          <div class="dark-mode-switch-ident"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="month-list"></div>
+                  </div>
+                </div>
     </section>
 </body>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="./script.js"></script>
+    <script src="./booking.js"></script>
+    <script src="/js-calendar-main/app.js"></script>
 </html>

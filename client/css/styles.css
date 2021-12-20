@@ -379,11 +379,16 @@ html * {
 
     .booking-con {
         position: relative;
-        width: 100vw;
+        /* width: 100vw; */
         height:100vh;
         overflow: hidden;
         display: flex;
-        justify-content: center;
+        /* justify-content: center; */
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-family: 'Righteous', cursive;
+
     }
       
     .book-background {
@@ -402,15 +407,15 @@ html * {
         font-size: 90px;
     }
     .booking-h2 {
-        color: white;
+        color: #C1440D;
         font-size: 30px;
     }
 
-    .booking-con {
-        margin-top: 40px;
-        text-align: center;
-        font-family: 'Righteous', cursive;
+    .title-con {
+        margin-bottom: 100px;
     }
+
+ 
 
 
 
