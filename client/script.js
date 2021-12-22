@@ -125,9 +125,11 @@ loginForm.addEventListener('submit', (e) => {
         
         
         axios.post('http://localhost:5432/api/login', {loginEmail, loginPass})
-        .then((req, res) => {
-           console.log(req.data)
-
+        .then((res) => {
+            localStorage.removeItem('user')
+            localStorage.setItem('user', JSON.stringify(res.data))
+            console.log(res, 'res')
+                checkUser()
         })
         .catch(err => console.log(err))
     }
@@ -159,13 +161,8 @@ zipBtn.addEventListener('click', (e) => {
         const location = res.data.location.name
         let tempNum = res.data.current.temp_f
          let tempInt = Math.round(tempNum)
-        // console.log(iconSrc);  
-        // console.log(iconImg);
 
-        // document.getElementById('temp-card')
         let li = document.createElement('li')
-
-        // const ul = document.getElementById('parent')
         
         const cardContent =  
         `<li class="temp-card">
@@ -180,7 +177,6 @@ zipBtn.addEventListener('click', (e) => {
         // document.getElementById('weather-list').appendChild(li)
         document.getElementById('parent').appendChild(li)
 
-        
         const deleteCard = document.getElementById('parent')
         deleteCard.classList.add('weather-hover')
         deleteCard.addEventListener('click', (e) => {
@@ -188,6 +184,17 @@ zipBtn.addEventListener('click', (e) => {
         })
     })
 })
+
+const checkUser = () => {
+    const user = JSON.parse(localStorage.getItem('user'))
+    // check to see if user exists.
+    // if so remove login/sign up buttons.
+    // and add a span of firstname.
+}
+console.log('hello?');
+checkUser()
+
+
 
 
 

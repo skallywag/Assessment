@@ -86,6 +86,7 @@ document.querySelector('#next-year').onclick = () => {
 }
 
 let dark_mode_toggle = document.querySelector('.dark-mode-switch')
+// let light_mode_toggle = document.querySelector('.light-mode-switch')
 
 dark_mode_toggle.onclick = () => {
     document.querySelector('body').classList.toggle('light')

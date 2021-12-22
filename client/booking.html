@@ -9,12 +9,15 @@
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="/js-calendar-main/app.css" />
+    <link rel="stylesheet" href="./custom-select/city-select.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/7059431f06.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Booking</title>
 </head>
 
-<body class="light">
+<body class="dark">
     
     <section id="sticky" class="nav-con">
         <a style="text-decoration: none;" href="./index.html"><div class="header-title">Trip to Mars</div></a>
@@ -91,53 +94,107 @@
         </div>
     </section>
 
-    <section class="booking-con">
-        <img class="book-background" src="./pictures/mars_feature.webp" alt="Picture of mars">
-            <div class="title-con">
+    <section class="booking-main-con">
+        <div>
+            <img class="book-background" src="./pictures/mars_feature.webp" alt="Picture of mars">
+        </div>
+        
+        <div class="title-con">
                 <h1 class="booking-h1">Mars Awaits</h1>
-                <h2 class="booking-h2">Book Your Trip Today!</h2>
+                <h2 class="booking-h2">Buy Your Ticket Today!</h2>
+
+        </div>
+            <form id="booking-form">
+                <div class="custom-select">
+                    <select id="book-city" required>
+                      <option value="0">City:</option>
+                      <option value="marscity1">Marscity1</option>
+                      <option value="marscity2">Marscity2</option>
+                      <option value="marscity3">Marscity3</option>
+                      <option value="marscity4">Marscity4</option>  
+                    </select>
+                </div>
+                <div>
+                    <button class="form-input" id="cal-btn">Depart Date</button>
+                </div>
+                <div>
+                    <input id="payload" placeholder="Payload/lb" type="text">
+                </div>
+                <div class="qty-select" required>
+                    <select class="qty" name="ticket" id="ticket-qty" required>
+                        <option>QTY</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="3">4</option>
+                    </select>
+                </div>
+                <div>
+                    <button class="book-submit"><i class="fas fa-arrow-circle-right"></i></button>
+                </div>      
+            </form>
+            <div class="error-con" style="display: none;">
+                <div id="qtyErr"></div>
+                <div id="weightErr"></div>
+                <div id="cityErr"></div>
             </div>
-            <button id="cal-btn">Select Dates</button>
-            <div id="cal-con" style="display: none;">
-                <div  id="calendar" class="calendar">
-                    <div class="calendar-header">
-                      <span class="month-picker" id="month-picker">February</span>
-                      <div class="year-picker">
-                        <span class="year-change" id="prev-year">
-                          <pre><</pre>
-                        </span>
-                        <span id="year">2021</span>
-                        <span class="year-change" id="next-year">
-                          <pre>></pre>
-                        </span>
-                      </div>
-                    </div>
-                    <div class="calendar-body">
-                      <div class="calendar-week-day">
-                        <div>Sun</div>
-                        <div>Mon</div>
-                        <div>Tue</div>
-                        <div>Wed</div>
-                        <div>Thu</div>
-                        <div>Fri</div>
-                        <div>Sat</div>
-                      </div>
-                      <div class="calendar-days"></div>
-                    </div>
-                    <div class="calendar-footer">
-                      <div class="toggle">
-                        <span>Dark Mode</span>
-                        <div class="dark-mode-switch">
-                          <div class="dark-mode-switch-ident"></div>
+               
+                <div class="cal-con" id="cal-con" style="display: none;">
+                    <div  id="calendar" class="calendar">
+                        <div class="calendar-header">
+                            <span class="month-picker" id="month-picker">February</span>
+                            <div class="year-picker">
+                            <span class="year-change" id="prev-year">
+                                <pre><</pre>
+                            </span>
+                            <span id="year">2021</span>
+                            <span class="year-change" id="next-year">
+                                <pre>></pre>
+                            </span>
+                            </div>
                         </div>
-                      </div>
+                        <div class="calendar-body">
+                            <div class="calendar-week-day">
+                            <div>Sun</div>
+                            <div>Mon</div>
+                            <div>Tue</div>
+                            <div>Wed</div>
+                            <div>Thu</div>
+                            <div>Fri</div>
+                            <div>Sat</div>
+                            </div>
+                            <div class="calendar-days"></div>
+                        </div>
+                        <div class="calendar-footer">
+                            <div class="toggle">
+                            <span>Dark Mode</span>
+                            <div class="dark-mode-switch">
+                                <div class="dark-mode-switch-ident"></div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="month-list"></div>
                     </div>
-                    <div class="month-list"></div>
-                  </div>
                 </div>
     </section>
-</body>
+
+    <section class="confirm-con">
+        <div>
+            <h1>heeeee</h1>
+            <h1>heeeee</h1>
+            <h1>heeeee</h1>
+            <h1>heeeee</h1>
+            <h1>heeeee</h1>
+            <h1>heeeee</h1>
+        </div>
+     
+    </section>
+                
+
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./custom-select/city-select.js"></script>
+    <script src="./script.js"></script>
     <script src="./booking.js"></script>
     <script src="/js-calendar-main/app.js"></script>
+</body>
 </html>

@@ -376,34 +376,34 @@ html * {
     .title {
         color: white;
     }
-
-    .booking-con {
-        position: relative;
-        /* width: 100vw; */
-        height:100vh;
-        overflow: hidden;
-        display: flex;
-        /* justify-content: center; */
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        font-family: 'Righteous', cursive;
-
-    }
-      
+    
     .book-background {
           object-fit: cover;
           height: 100%;
           width: 100%;
-          position: fixed;
+          position:fixed;
           top: 0;
           left: 0;
           z-index: -1;
-          opacity: 95%;
+          opacity: 90%;
     }
 
+    .booking-main-con {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        flex-direction: column;
+        text-align: center;
+        font-family: 'Righteous', cursive;
+    }
+       
+    .title-con {
+        color: whitesmoke;
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
     .booking-h1 {
-        color: white;
         font-size: 90px;
     }
     .booking-h2 {
@@ -411,11 +411,172 @@ html * {
         font-size: 30px;
     }
 
-    .title-con {
-        margin-bottom: 100px;
+    .book-form-con {
+       padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     
     }
 
+    .book-input {
+        height: auto;
+        margin-left: 10px;
+        font-size: 25px;
+        background-color: #C1440D;
+        color: white;
+        border-radius: 5px;
+        border:none;
+        padding: 10px;
+    }
+    .book-input:hover{
+        cursor: pointer;
+        background-color: whitesmoke;
+        color: #C1440D;
+        transition: 1s;
+    }
+
+    #pay-load {
+        width: 150px;
+    }
+    .cal-con {
+        display: flex;
+        justify-content: center;
+     
+    }
+
+    .fas {
+        font-size: 30px;
+        width: 40px;
+    }
+    #booking-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    
+      .form-input {
+          font-size: 30px;
+          background-color: #C1440D;
+          color: white;
+          padding: 5px;
+          border-radius: 5px;
+          border-style: none;
+      }
+
+      .form-input:hover {
+          cursor: pointer;
+          color: #C1440D;
+          background-color: white;
+          transition: 1s;
+      }
+
+      #payload {
+          width: 100px;
+          background-color: darkgray;
+          border: 1px solid #C1440D;
+          border-radius: 5px;
+          border-style: none;
+          height: 45px;
+          font-size: 30px;
+          color: #C1440D;
+          text-align: center;
+      }
+      #payload::placeholder {
+          font-size: 18px;
+          color: #C1440D;
+          text-align: center;
+      }
+
+
+      .qty {
+        border: none;
+        background: #C1440D;
+        color: white;
+        cursor: pointer;
+        font-size: 30px;
+        padding: 5px;
+        outline: none;
+        border-radius: 5px;
+        appearance: none;
+        text-align: center;
+        width: 100px;
+        display: flex;
+        align-items: center;
+    }
+
+    .qty-select {
+        position: relative;
+        line-height: 3;
+        background-color: #C1440D;  
+        border-radius: 5px;
+    }
+
+   
+    /* .qty-select select {
+        display: none; 
+    } */
+    
+    .fas {
+        color: #C1440D;
+        font-size: 80px;
+    }
+    .fas:hover {
+        color: white;
+        transition: 1.5s;
+    }
+    .book-submit {
+        background: none;
+        border: none;
+        
+    }
+    .book-submit:hover {
+        cursor: pointer;
+    }
+
+    .error-con {
+        background-color: black;
+        text-align: center;
+        padding: 20px;
+        border-radius: 5px;
+        width: 200px;
+        position: absolute;
+        left: 42%;
+        /* opacity: 20%; */
+        color: #C1440D;
+        line-height: 25px;
+    }
+
+
+
+      
+    
+  
+
+
+   
+
+
+
+
+
+
+
+
+
+      .confirm-con {
+          background-color: #C1440D;
+      }
+   
  
+
+    
+
+
+
 
 
 

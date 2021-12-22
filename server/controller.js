@@ -29,17 +29,20 @@ module.exports = {
        sequelize.query(`SELECT * FROM users
        WHERE email = '${loginEmail}'`)
        .then(dbRes => {
-            if(dbRes[0].email){
-                if(dbRes[0].password === `${loginPass}`) {
-                    res.sendStatus(200)
+           const results = dbRes[0][0]
+            if(results){
+                if(results.password === loginPass) {
+                    res.status(200).send(results)
                     console.log('We found the user')
+                        
+                }else {
+                    res.status(404)
+                    console.log('Your password does not match.')
                 }
-                res.sendStatus(404)
-                return console.log('Your password does not match.')
+                return
             }
-            res.sendStatus(404)
-            return console.log('We couldnt find the user')
-
+            res.status(404)
+            console.log('We couldnt find the user')
        })
        .catch(err => console.log('We could not find the user', err))
     }
