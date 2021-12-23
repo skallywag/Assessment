@@ -126,9 +126,10 @@ loginForm.addEventListener('submit', (e) => {
         
         axios.post('http://localhost:5432/api/login', {loginEmail, loginPass})
         .then((res) => {
+            console.log(res);
             localStorage.removeItem('user')
             localStorage.setItem('user', JSON.stringify(res.data))
-            console.log(res, 'res')
+            // console.log(res)
                 checkUser()
         })
         .catch(err => console.log(err))
@@ -174,7 +175,6 @@ zipBtn.addEventListener('click', (e) => {
         </li>`
                     
         li.innerHTML = cardContent
-        // document.getElementById('weather-list').appendChild(li)
         document.getElementById('parent').appendChild(li)
 
         const deleteCard = document.getElementById('parent')
@@ -186,14 +186,45 @@ zipBtn.addEventListener('click', (e) => {
 })
 
 const checkUser = () => {
+    const logOut = document.querySelector('.log-out')
+    // console.log(logOut)
+    const accBtns = document.getElementById('acc-btns')
+    // console.log(accBtns);
+    const loggedName = document.getElementById('loggedName')
+
     const user = JSON.parse(localStorage.getItem('user'))
-    // check to see if user exists.
-    // if so remove login/sign up buttons.
-    // and add a span of firstname.
+    // const userName = user.name
+
+    if(user){
+        logOut.style.display = 'flex'
+        accBtns.style.display = 'none'
+        loggedName.innerHTML = user.name
+    }
+
+    if(!user){
+        logOut.style.display = 'none'
+    }
 }
-console.log('hello?');
 checkUser()
 
+
+
+const logOutUser = () => {
+   window.localStorage.removeItem('user')
+   const logOut = document.querySelector('.log-out')
+   const accBtns = document.getElementById('acc-btns')
+   const loggedName = document.getElementById('loggedName')
+
+   logOut.style.display = 'none'
+   accBtns.style.display = 'flex'
+   loggedName.innerHTML = ''
+}
+
+const logOutBtn = document.getElementById('log-out')
+logOutBtn.addEventListener('click', logOutUser)
+
+
+// console.log(logOutBtn);
 
 
 

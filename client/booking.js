@@ -1,52 +1,55 @@
-const calBtn = document.getElementById('cal-btn')
-// const cityError = document.getElementById('city-err')
-
-
+// const calBtn = document.getElementById('cal-btn')
 const bookForm = document.getElementById('booking-form')
-// console.log(bookForm);
 
 bookForm.addEventListener('submit', (e) => {
     e.preventDefault()
     const city = document.getElementById('book-city').value
     console.log(city);
-    const date = document.getElementById('calendar').value
-    console.log(date);
+    const dateSlct = document.getElementById('date-slct').value
+    console.log(dateSlct);
     const weight = document.getElementById('payload').value
     console.log(weight);
     const ticket = document.getElementById('ticket-qty').value
     console.log(ticket);
     
-    if(bookValidate({city, weight, ticket})){
+    if(bookValidate({city, weight, ticket, dateSlct})){
+        document.getElementById('book-city').value = 'City'
+        document.getElementById('payload').value = ''
+        document.getElementById('ticket-qty').value = 'QTY'
+    
+
         
-    }
-    
-    
-    
-    
+    } 
 })
 
 
 function bookValidate(input){
     let errors = {}
     // console.log(input.city, 'city')
-    if(input.city === '0'){
-        // console.log(errors.city)
-        errors.city = `<span>please select a city</span>`
+    if(input.city === 'City:'){
+        console.log(errors.city)
+        errors.city = `<span>please select a destination</span>`
         document.getElementById('cityErr').innerHTML = errors.city
     }
     
     if(input.weight === 0 || input.weight === ''){
-        // console.log(errors.weight);
-        errors.weight = `<span>please eanter a weight</span>`
-        document.getElementById('weightErr').innerHTML = errors.weight
+        console.log(errors.weight);
+        errors.weight = `<span>please eanter a payload</span>`
+        document.getElementById('payloadErr').innerHTML = errors.weight
     }
     
-    if(input.ticket == 'QTY' ){
-        // console.log(errors.ticket);
-        errors.ticket = `<span>please enter qty</span>`
+    if(input.ticket == 'QTY'){
+        console.log(errors.ticket);
+        errors.ticket = `<span>please select qty</span>`
         document.getElementById('qtyErr').innerHTML = errors.ticket
     }
-    
+
+    // if(input.dateSlct){
+    //     console.log(errors.dateSlct)
+    //     errors.dateSlct = `<span>Please select a date</span>`
+    //     document.getElementById('dateErr').innerHTML = errors.dateSlct
+    // }
+
     
     if(Object.keys(errors).length === 0) return true
     console.log(errors)
@@ -54,12 +57,34 @@ function bookValidate(input){
 }
 
 
-calBtn.addEventListener('click', (e) => {
-        // e.preventDefault()
-    const calendar = document.getElementById('cal-con')
-    console.log(calendar);
-    if(calendar.style.display === 'none'){
-        calendar.style.display = 'flex'
-    }
-})
+// calBtn.addEventListener('click', (e) => {
+//     // e.preventDefault()
+// const calendar = document.getElementById('cal-con')
+// console.log(calendar);
+// if(calendar.style.display === 'none'){
+//     calendar.style.display = 'flex'
+// }
+// })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
 

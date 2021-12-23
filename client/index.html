@@ -14,10 +14,15 @@
 <body>  
     <section id="sticky" class="nav-con">
         <div class="header-title">Trip to Mars</div>
-        <div>
+    
             <a class="crumb" href="./booking.html">Booking</a>
-            <button class="login-btn" onclick="showLogin()">Login</button>
-            <button class="signup-btn" onclick="showSignUp()">Sign up</button>
+      
+    
+            <button id="log-out" class="log-out" style="display: none;" >LogOut</button>
+            <span id="loggedName"></span>
+            <div id="acc-btns">
+            <button id="log-in" class="login-btn" onclick="showLogin()">Login</button>
+            <button id="sign-up" class="signup-btn" onclick="showSignUp()">Sign up</button>
         </div>
 
         <div class="login-con" style="display: none;">
@@ -25,6 +30,7 @@
                 <button type="click" class="close" onclick="closeForm()">X</button>
                 <form id="login-form">
             </div>
+                <div id="404Err"></div>
                 <div id="err"></div>
                     <div id="errLogin"></div>
         
@@ -145,19 +151,20 @@
     
     
     <section class="footer">
-        <div>
-            <h1>footer</h1>
-        </div>
+       
+        <h1>FOOTEr</h1>
 
 
 
 
 
     </section>  
-</body>
+
+    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./script.js"></script>
     <script src="./booking.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</body>
 </html>
 
 <!-- <sup>°F</sup> -->

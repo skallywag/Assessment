@@ -133,6 +133,24 @@ html * {
     cursor: pointer;
 }
 
+.log-out {
+    height: 50px;
+    width: 100px;
+    border-radius: 10px;
+    border: 3px white;
+    color: white;
+    background: none;
+    border-style: solid;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 50px;
+}
+.log-out:hover {
+    cursor: pointer;
+    background-color: #C1440D;
+    color: white;
+}
+
 .signup-btn {
     height: 50px;
     width: 100px;
@@ -185,8 +203,8 @@ html * {
     opacity: 30%;
     height: 48px;
     border-radius: 5px;
+    outline: none;
   }
- 
 
   .zip-label {
     color: azure;
@@ -364,13 +382,15 @@ html * {
     }
 
     .crumb {
-        color: white;
+        color: #C1440D;
         margin-right: 15px;
         font-size: 20px;
+        position: absolute;
+        right: 20%;
     }
 
     .crumb:hover {
-        color: #C1440D;
+        color: white; 
     }
 
     .title {
@@ -458,7 +478,7 @@ html * {
     }
 
     
-      .form-input {
+      .cal-btn {
           font-size: 30px;
           background-color: #C1440D;
           color: white;
@@ -467,11 +487,27 @@ html * {
           border-style: none;
       }
 
-      .form-input:hover {
+      .cal-btn:hover {
           cursor: pointer;
           color: #C1440D;
           background-color: white;
           transition: 1s;
+      }
+
+      .cal-date {
+        font-size: 20px;
+        background-color: #C1440D;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        border-style: none;
+        outline: none;
+
+      }
+
+      .cal-slct {
+          outline: none;
+          border-style: none;
       }
 
       #payload {
@@ -484,6 +520,7 @@ html * {
           font-size: 30px;
           color: #C1440D;
           text-align: center;
+          outline: none;
       }
       #payload::placeholder {
           font-size: 18px;
@@ -537,18 +574,59 @@ html * {
         cursor: pointer;
     }
 
+    #loggedName {
+        color: white;
+        font-size: 30px;
+        position:absolute;
+        right: 11%;
+    }
+
     .error-con {
-        background-color: black;
-        text-align: center;
+        /* background-color: black; */
+        text-align: left;
         padding: 20px;
         border-radius: 5px;
-        width: 200px;
         position: absolute;
         left: 42%;
-        /* opacity: 20%; */
-        color: #C1440D;
         line-height: 25px;
     }
+
+    .book-err {
+        color: whitesmoke;
+        font-size: 18px;
+        opacity: 300%;
+        border-radius: 5px;
+        /* border-bottom: 1px solid black; */
+        border-bottom: 1px solid black;
+        color: #C1440D;
+    }
+
+    .confirm-con {
+        height: 50vh;
+        background-color: blue;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+
+    #userBook-con {
+        background-color: yellow;
+        width: 400px;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        font-size: 30px;
+        margin-left: 50px;
+    }
+
+    .book-title {
+        font-size: 60px;
+        border-bottom: 2px solid black;
+        margin-bottom: 30px;
+    }
+
+    
 
 
 

@@ -25,7 +25,6 @@ module.exports = {
 
     userLogin: (req, res) => {
        const {loginEmail, loginPass} = req.body
-       // when we get the login - we want to check if it exists.
        sequelize.query(`SELECT * FROM users
        WHERE email = '${loginEmail}'`)
        .then(dbRes => {
@@ -37,12 +36,12 @@ module.exports = {
                         
                 }else {
                     res.status(404)
-                    console.log('Your password does not match.')
+                    .send('Your password does not match.')
                 }
                 return
             }
             res.status(404)
-            console.log('We couldnt find the user')
+            .send('We couldnt find the user')
        })
        .catch(err => console.log('We could not find the user', err))
     }

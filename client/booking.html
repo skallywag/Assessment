@@ -21,8 +21,11 @@
     
     <section id="sticky" class="nav-con">
         <a style="text-decoration: none;" href="./index.html"><div class="header-title">Trip to Mars</div></a>
-        <div>
-            <a class="crumb" href="./index.html">Home</a>
+        <a class="crumb" href="./index.html">Home</a>
+
+        <button id="log-out" class="log-out" >LogOut</button>
+        
+        <div class="acc-btns">
             <button class="login-btn" onclick="showLogin()">Login</button>
             <button class="signup-btn" onclick="showSignUp()">Sign up</button>
         </div>
@@ -106,8 +109,9 @@
         </div>
             <form id="booking-form">
                 <div class="custom-select">
-                    <select id="book-city" required>
-                      <option value="0">City:</option>
+                    <select id="book-city" name="custom-select">
+                      <option value="City:">City:</option>
+                      <option value="City:">City:</option>
                       <option value="marscity1">Marscity1</option>
                       <option value="marscity2">Marscity2</option>
                       <option value="marscity3">Marscity3</option>
@@ -115,14 +119,15 @@
                     </select>
                 </div>
                 <div>
-                    <button class="form-input" id="cal-btn">Depart Date</button>
+                    <input class="cal-date" id="date-slct" type="date">
+                    <!-- <button class="cal-btn" id="cal-btn" type="button">Depart Date</button> -->
                 </div>
                 <div>
                     <input id="payload" placeholder="Payload/lb" type="text">
                 </div>
-                <div class="qty-select" required>
-                    <select class="qty" name="ticket" id="ticket-qty" required>
-                        <option>QTY</option>
+                <div class="qty-select">
+                    <select class="qty" name="ticket" id="ticket-qty">
+                        <option value="QTY">QTY</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -130,17 +135,18 @@
                     </select>
                 </div>
                 <div>
-                    <button class="book-submit"><i class="fas fa-arrow-circle-right"></i></button>
+                    <button class="book-submit" type="submit"><i class="fas fa-arrow-circle-right"></i></button>
                 </div>      
             </form>
-            <div class="error-con" style="display: none;">
-                <div id="qtyErr"></div>
-                <div id="weightErr"></div>
-                <div id="cityErr"></div>
+            <div class="error-con">
+                <div class="book-err" id="qtyErr"></div>
+                <div class="book-err" id="payloadErr"></div>
+                <div class="book-err" id="cityErr"></div>
+                <div class="book-err" id="dateErr"></div>
             </div>
                
                 <div class="cal-con" id="cal-con" style="display: none;">
-                    <div  id="calendar" class="calendar">
+                    <div  id="calendar" class="calendar" >
                         <div class="calendar-header">
                             <span class="month-picker" id="month-picker">February</span>
                             <div class="year-picker">
@@ -179,15 +185,15 @@
     </section>
 
     <section class="confirm-con">
-        <div>
-            <h1>heeeee</h1>
-            <h1>heeeee</h1>
-            <h1>heeeee</h1>
-            <h1>heeeee</h1>
-            <h1>heeeee</h1>
-            <h1>heeeee</h1>
+
+
+        <div id="userBook-con">
+            
         </div>
+        
      
+
+
     </section>
                 
 
