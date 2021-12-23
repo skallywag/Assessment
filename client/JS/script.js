@@ -119,7 +119,7 @@ loginForm.addEventListener('submit', (e) => {
 
     if(loginValid({loginEmail, loginPass})){
         // console.log(userLogin);
-        console.log(true);
+        // console.log(true);
         document.getElementById('login-email').value = ''
         document.getElementById('login-pass').value = ''
         

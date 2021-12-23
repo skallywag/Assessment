@@ -44,5 +44,18 @@ module.exports = {
             .send('We couldnt find the user')
        })
        .catch(err => console.log('We could not find the user', err))
+    },
+
+    createTrip: (req, res) => {
+        const {userId, city, weight, ticket, dateSlct} = req.body
+
+        sequelize.query(`INSERT INTO trips(user_id, city, date, weight, qty)
+        VALUES ('${userId}', '${city}', '${dateSlct}', '${weight}', '${ticket}');`)
+        
+        res.status(200).send('Trip Created!')
+    },
+
+    getTrip: (req, res) => {
+
     }
 }

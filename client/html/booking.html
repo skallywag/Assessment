@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="html" href="./index.html">
-    <link rel="stylesheet" href="./css/helper.css">
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="./reset.css">
+    <link rel="html" href="/client/html/index.html">
+    <link rel="stylesheet" href="/client/css/helper.css">
+    <link rel="stylesheet" href="/client/css/styles.css">
+    <link rel="stylesheet" href="/client/css/reset.css">
     <link rel="stylesheet" href="/js-calendar-main/app.css" />
-    <link rel="stylesheet" href="./custom-select/city-select.css">
+    <link rel="stylesheet" href="../custom-select/city-select.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/7059431f06.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <title>Booking</title>
 </head>
 
@@ -21,10 +22,12 @@
     
     <section id="sticky" class="nav-con">
         <a style="text-decoration: none;" href="./index.html"><div class="header-title">Trip to Mars</div></a>
-        <a class="crumb" href="./index.html">Home</a>
 
-        <button id="log-out" class="log-out" >LogOut</button>
-        
+        <a class="crumb" href="/client/html/index.html">Home</a>
+
+   
+            <button id="log-out" class="log-out" >LogOut</button>
+            <span id="loggedName"></span>
         <div class="acc-btns">
             <button class="login-btn" onclick="showLogin()">Login</button>
             <button class="signup-btn" onclick="showSignUp()">Sign up</button>
@@ -99,7 +102,7 @@
 
     <section class="booking-main-con">
         <div>
-            <img class="book-background" src="./pictures/mars_feature.webp" alt="Picture of mars">
+            <img class="book-background" src="../pictures/mars_feature.webp" alt="Picture of mars">
         </div>
         
         <div class="title-con">
@@ -107,6 +110,7 @@
                 <h2 class="booking-h2">Buy Your Ticket Today!</h2>
 
         </div>
+            <span id="login-required"></span>
             <form id="booking-form">
                 <div class="custom-select">
                     <select id="book-city" name="custom-select">
@@ -198,9 +202,9 @@
                 
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="./custom-select/city-select.js"></script>
-    <script src="./script.js"></script>
-    <script src="./booking.js"></script>
+    <script src="../custom-select/city-select.js"></script>
+    <script src="/client/JS/script.js"></script>
+    <script src="/client/JS/booking.js"></script>
     <script src="/js-calendar-main/app.js"></script>
 </body>
 </html>

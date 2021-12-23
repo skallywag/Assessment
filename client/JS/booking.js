@@ -1,3 +1,5 @@
+
+
 // const calBtn = document.getElementById('cal-btn')
 const bookForm = document.getElementById('booking-form')
 
@@ -13,17 +15,27 @@ bookForm.addEventListener('submit', (e) => {
     console.log(ticket);
     
     if(bookValidate({city, weight, ticket, dateSlct})){
-        document.getElementById('book-city').value = 'City'
+        document.getElementById('book-city').value = 'City:'
         document.getElementById('payload').value = ''
         document.getElementById('ticket-qty').value = 'QTY'
-    
+        let user = JSON.parse(localStorage.getItem('user'))
+        let userId = user.id
 
         
+
+
+
+
+        axios.post('http://localhost:5432/api/trips', {userId, city, weight, ticket, dateSlct})
+        .then(res => {
+            console.log(res)
+        })        
     } 
 })
 
 
 function bookValidate(input){
+    const user = JSON.parse(localStorage.getItem('user'))
     let errors = {}
     // console.log(input.city, 'city')
     if(input.city === 'City:'){
@@ -44,11 +56,16 @@ function bookValidate(input){
         document.getElementById('qtyErr').innerHTML = errors.ticket
     }
 
-    // if(input.dateSlct){
-    //     console.log(errors.dateSlct)
-    //     errors.dateSlct = `<span>Please select a date</span>`
-    //     document.getElementById('dateErr').innerHTML = errors.dateSlct
-    // }
+    if(input.dateSlct == 'mm/dd/yyyy'){
+        console.log(errors.dateSlct)
+        errors.dateSlct = `<span>Please select a date</span>`
+        document.getElementById('dateErr').innerHTML = errors.dateSlct
+    }
+
+    if(!user){
+       const logReq = document.getElementById('login-required')
+       logReq.innerHTML = `Please Login`
+    }
 
     
     if(Object.keys(errors).length === 0) return true
@@ -65,6 +82,16 @@ function bookValidate(input){
 //     calendar.style.display = 'flex'
 // }
 // })
+
+
+
+
+
+
+
+
+
+
 
 
 
