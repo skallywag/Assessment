@@ -1,4 +1,3 @@
-
 const createForm = document.querySelector('#create-form')
 // console.log(createForm);
 const loginForm = document.querySelector('#login-form')
@@ -108,8 +107,6 @@ function validate(input){
 }
 
 
-
-
 loginForm.addEventListener('submit', (e) => {
     e.preventDefault()
     loginEmail = document.getElementById('login-email').value 
@@ -126,11 +123,14 @@ loginForm.addEventListener('submit', (e) => {
         
         axios.post('http://localhost:5432/api/login', {loginEmail, loginPass})
         .then((res) => {
-            console.log(res);
+            // console.log(res);
             localStorage.removeItem('user')
             localStorage.setItem('user', JSON.stringify(res.data))
-            // console.log(res)
                 checkUser()
+                
+                const user = JSON.parse(localStorage.getItem('user'))
+                document.getElementById('log-success').innerHTML = `Welcome Back ${user.name}!`
+            
         })
         .catch(err => console.log(err))
     }
@@ -185,43 +185,43 @@ zipBtn.addEventListener('click', (e) => {
     })
 })
 
-const checkUser = () => {
-    const logOut = document.querySelector('.log-out')
+function checkUser2(){
+    const logOut2 = document.querySelector('.log-out')
     // console.log(logOut)
-    const accBtns = document.getElementById('acc-btns')
+    const accBtns2 = document.getElementById('acc-btns')
     // console.log(accBtns);
-    const loggedName = document.getElementById('loggedName')
+    const loggedName2 = document.getElementById('loggedName')
 
     const user = JSON.parse(localStorage.getItem('user'))
     // const userName = user.name
 
     if(user){
-        logOut.style.display = 'flex'
-        accBtns.style.display = 'none'
-        loggedName.innerHTML = user.name
+        logOut2.style.display = 'flex'
+        accBtns2.style.display = 'none'
+        loggedName2.innerHTML = user.name
     }
 
     if(!user){
-        logOut.style.display = 'none'
+        logOut2.style.display = 'none'
     }
 }
-checkUser()
+checkUser2()
 
 
 
-const logOutUser = () => {
+const logOutUser2 = () => {
    window.localStorage.removeItem('user')
-   const logOut = document.querySelector('.log-out')
-   const accBtns = document.getElementById('acc-btns')
-   const loggedName = document.getElementById('loggedName')
+   const logOut2 = document.querySelector('.log-out')
+   const accBtns2 = document.getElementById('acc-btns')
+   const loggedName2 = document.getElementById('loggedName')
 
-   logOut.style.display = 'none'
-   accBtns.style.display = 'flex'
-   loggedName.innerHTML = ''
+   logOut2.style.display = 'none'
+   accBtns2.style.display = 'flex'
+   loggedName2.innerHTML = ''
 }
 
-const logOutBtn = document.getElementById('log-out')
-logOutBtn.addEventListener('click', logOutUser)
+const logOutBtn2 = document.getElementById('log-out')
+logOutBtn2.addEventListener('click', logOutUser2)
 
 
 // console.log(logOutBtn);

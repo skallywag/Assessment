@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Staatliches&display=swap');
-body {
+body * {
     font-family: 'Righteous', cursive;
 }
 html * {
@@ -16,7 +16,6 @@ html * {
     height: 100px;
     /* opacity: 90%; */
     position: relative;
-    /* position: fixed; */
     /* z-index: 5; */
     /* width: 100%;   */
 }
@@ -72,6 +71,7 @@ html * {
     margin-left: 32vw;
     margin-top:60vh;
     position: fixed;
+    height: 30%;
 }
 
 .input {
@@ -116,9 +116,13 @@ html * {
 }
 
 .error {
-    color: red;
+    color:#C1440D;
     font-weight: bold;
     font-size: 15px;
+    position: absolute;
+    top: 20px;
+    left: 41%;
+
 }
 
 .login-btn {
@@ -405,7 +409,7 @@ html * {
           top: 0;
           left: 0;
           z-index: -1;
-          opacity: 90%;
+          opacity: 94%;
     }
 
     .booking-main-con {
@@ -416,6 +420,8 @@ html * {
         flex-direction: column;
         text-align: center;
         font-family: 'Righteous', cursive;
+        display: flex;
+        align-items: center;
     }
        
     .title-con {
@@ -478,7 +484,7 @@ html * {
     }
 
     
-      .cal-btn {
+    /* .cal-btn {
           font-size: 30px;
           background-color: #C1440D;
           color: white;
@@ -487,14 +493,14 @@ html * {
           border-style: none;
       }
 
-      .cal-btn:hover {
+    .cal-btn:hover {
           cursor: pointer;
           color: #C1440D;
           background-color: white;
           transition: 1s;
-      }
+      } */
 
-      .cal-date {
+    .cal-date {
         font-size: 20px;
         background-color: #C1440D;
         color: white;
@@ -505,12 +511,16 @@ html * {
 
       }
 
-      .cal-slct {
+      .cal-date:hover {
+          cursor: pointer;
+      }
+
+    .cal-slct {
           outline: none;
           border-style: none;
       }
 
-      #payload {
+    #payload {
           width: 100px;
           background-color: darkgray;
           border: 1px solid #C1440D;
@@ -522,14 +532,14 @@ html * {
           text-align: center;
           outline: none;
       }
-      #payload::placeholder {
+    #payload::placeholder {
           font-size: 18px;
           color: #C1440D;
           text-align: center;
       }
 
 
-      .qty {
+    .qty {
         border: none;
         background: #C1440D;
         color: white;
@@ -601,14 +611,6 @@ html * {
         color: #C1440D;
     }
 
-    .confirm-con {
-        height: 50vh;
-        background-color: blue;
-        display: flex;
-        justify-content: start;
-        align-items: center;
-    }
-
     #userBook-con {
         background-color: yellow;
         width: 400px;
@@ -629,6 +631,22 @@ html * {
     #login-required {
         color: white;
         font-size: 20px;
+    }
+
+    #log-success {
+        color: #C1440D;
+        font-size: 50px;
+        position: absolute;
+        top: 15px;
+    }
+
+    #confirm-con {
+        background-color: #C1440D;
+        height: 50vh;
+        width: 50vw;
+        display: flex;
+
+        border-radius: 5px;
     }
 
     
@@ -683,7 +701,7 @@ html * {
 
 
     .footer {
-        background-color: darkgray;
+        background-color: black;
         height: 30vh;
     }
 

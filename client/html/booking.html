@@ -21,16 +21,15 @@
 <body class="dark">
     
     <section id="sticky" class="nav-con">
-        <a style="text-decoration: none;" href="./index.html"><div class="header-title">Trip to Mars</div></a>
+        <a style="text-decoration: none;" href="/client/html/index.html"><div class="header-title">Trip to Mars</div></a>
+            <a class="crumb" href="/client/html/index.html">Home</a>
 
-        <a class="crumb" href="/client/html/index.html">Home</a>
+        <button id="log-out" class="log-out" style="display: none;" >LogOut</button>
+        <span id="loggedName"></span>
 
-   
-            <button id="log-out" class="log-out" >LogOut</button>
-            <span id="loggedName"></span>
-        <div class="acc-btns">
-            <button class="login-btn" onclick="showLogin()">Login</button>
-            <button class="signup-btn" onclick="showSignUp()">Sign up</button>
+        <div id="acc-btns">
+            <button id="log-in" class="login-btn" onclick="showLogin()">Login</button>
+            <button id="sign-up" class="signup-btn" onclick="showSignUp()">Sign up</button>
         </div>
 
         <div class="login-con" style="display: none;">
@@ -38,8 +37,9 @@
                 <button type="click" class="close" onclick="closeForm()">X</button>
                 <form id="login-form">
             </div>
+                <div id="log-success"></div>
                 <div id="err"></div>
-                    <div id="errLogin"></div>
+                <div id="errLogin"></div>
         
                 <label class="label" for="login-email"></label>
                     <div>
@@ -102,24 +102,24 @@
 
     <section class="booking-main-con">
         <div>
-            <img class="book-background" src="../pictures/mars_feature.webp" alt="Picture of mars">
+            <img class="book-background" src="../pictures/mars_feature.webp"  alt="Picture of mars">
         </div>
         
         <div class="title-con">
-                <h1 class="booking-h1">Mars Awaits</h1>
-                <h2 class="booking-h2">Buy Your Ticket Today!</h2>
-
+            <h1 class="booking-h1">Mars Awaits</h1>
+            <h2 class="booking-h2">Buy Your Ticket Today!</h2>
         </div>
+
             <span id="login-required"></span>
             <form id="booking-form">
                 <div class="custom-select">
                     <select id="book-city" name="custom-select">
                       <option value="City:">City:</option>
-                      <option value="City:">City:</option>
-                      <option value="marscity1">Marscity1</option>
-                      <option value="marscity2">Marscity2</option>
-                      <option value="marscity3">Marscity3</option>
-                      <option value="marscity4">Marscity4</option>  
+                      <option value="0">City:</option>
+                      <option value="Phoenexia">Phoenexia</option>
+                      <option value="CHYRSE">CHYRSE</option>
+                      <option value="Proxima">Proxima</option>
+                      <option value="Martian City">Martian City</option>  
                     </select>
                 </div>
                 <div>
@@ -148,50 +148,15 @@
                 <div class="book-err" id="cityErr"></div>
                 <div class="book-err" id="dateErr"></div>
             </div>
-               
-                <div class="cal-con" id="cal-con" style="display: none;">
-                    <div  id="calendar" class="calendar" >
-                        <div class="calendar-header">
-                            <span class="month-picker" id="month-picker">February</span>
-                            <div class="year-picker">
-                            <span class="year-change" id="prev-year">
-                                <pre><</pre>
-                            </span>
-                            <span id="year">2021</span>
-                            <span class="year-change" id="next-year">
-                                <pre>></pre>
-                            </span>
-                            </div>
-                        </div>
-                        <div class="calendar-body">
-                            <div class="calendar-week-day">
-                            <div>Sun</div>
-                            <div>Mon</div>
-                            <div>Tue</div>
-                            <div>Wed</div>
-                            <div>Thu</div>
-                            <div>Fri</div>
-                            <div>Sat</div>
-                            </div>
-                            <div class="calendar-days"></div>
-                        </div>
-                        <div class="calendar-footer">
-                            <div class="toggle">
-                            <span>Dark Mode</span>
-                            <div class="dark-mode-switch">
-                                <div class="dark-mode-switch-ident"></div>
-                            </div>
-                            </div>
-                        </div>
-                        <div class="month-list"></div>
-                    </div>
-                </div>
-    </section>
+            <div id="confirm-con">
+                
+            </div>
+        </section>
 
-    <section class="confirm-con">
+    <section>
 
 
-        <div id="userBook-con">
+        <div>
             
         </div>
         
@@ -208,3 +173,12 @@
     <script src="/js-calendar-main/app.js"></script>
 </body>
 </html>
+
+
+<!-- <button style="display: none;" id="log-out" class="log-out">LogOut</button>
+<span id="loggedName"></span>
+
+<div class="acc-btns">
+    <button class="login-btn" onclick="showLogin()">Login</button>
+    <button class="signup-btn" onclick="showSignUp()">Sign up</button>
+</div> -->

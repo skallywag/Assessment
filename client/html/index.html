@@ -17,23 +17,21 @@
         <div class="header-title">Trip to Mars</div>
     
             <a class="crumb" href="/client/html/booking.html">Booking</a>
-      
-    
-            <button id="log-out" class="log-out" style="display: none;" >LogOut</button>
-            <span id="loggedName"></span>
-            <div id="acc-btns">
-            <button id="log-in" class="login-btn" onclick="showLogin()">Login</button>
-            <button id="sign-up" class="signup-btn" onclick="showSignUp()">Sign up</button>
-        </div>
+                <button id="log-out" class="log-out" style="display: none;" >LogOut</button>
+                <span id="loggedName"></span>
+            <div id="acc-btns" class="acc-btns">
+                <button id="log-in" class="login-btn" onclick="showLogin()">Login</button>
+                <button id="sign-up" class="signup-btn" onclick="showSignUp()">Sign up</button>
+            </div>
 
         <div class="login-con" style="display: none;">
             <div>
                 <button type="click" class="close" onclick="closeForm()">X</button>
                 <form id="login-form">
             </div>
-                <div id="404Err"></div>
+                <div id="log-success"></div>
                 <div id="err"></div>
-                    <div id="errLogin"></div>
+                <div id="errLogin"></div>
         
                 <label class="label" for="login-email"></label>
                     <div>
@@ -95,7 +93,7 @@
     </section>
 
     <div class="video-wrapper">
-        <video id="background-video" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
+        <video id="background-video" autoplay loop muted poster="/client/pictures/mars_feature.webp">
             <source src="../pictures/production ID_4478322.mp4" type="video/mp4">
         </video>
 
@@ -153,7 +151,7 @@
     
     <section class="footer">
        
-        <h1>FOOTEr</h1>
+        <h1 style="color: aliceblue;">Footer</h1>
 
 
 
