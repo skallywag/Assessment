@@ -366,7 +366,7 @@ html * {
         text-align: right;
     }
 
-    .book-btn {
+    .booking-btn {
         font-size: 30px;
         height: 60px;
         border: 3px white solid;
@@ -374,7 +374,7 @@ html * {
         color: white;
     }
 
-    .book-btn:hover {
+    .booking-btn:hover {
         cursor: pointer;
         transition: ease-in-out .4s;
         color:#C1440D;
@@ -481,6 +481,7 @@ html * {
         align-items: center;
         padding: 10px;
         gap: 10px;
+        margin-bottom: 30px;
     }
 
     
@@ -599,6 +600,7 @@ html * {
         position: absolute;
         left: 42%;
         line-height: 25px;
+        top: 35%;
     }
 
     .book-err {
@@ -639,16 +641,128 @@ html * {
         position: absolute;
         top: 15px;
     }
-
-    #confirm-con {
-        background-color: #C1440D;
-        height: 50vh;
-        width: 50vw;
-        display: flex;
-
-        border-radius: 5px;
+    .dest-title {
+        margin-right: 15px;
     }
 
+    #confirm-con {
+    background-color: #C1440D;
+    height: 53vh;
+    width: 58vw;
+    border-radius: 10px;
+    line-height: 30px;
+    font-size: 20px;
+    /* display: flex; */
+    flex-direction: column;
+    z-index: 98;
+    position: absolute;
+    top: 23%;
+    }
+
+    .bk-confirm-title {
+        font-size: 40px;
+        color: black;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+
+    .confirm-ticket {
+        font-size: 25px;
+        line-height: 40px;
+        margin-bottom: 25px;
+    }
+
+     #confirm-book-btn {
+         position: absolute;
+         right: 3%;
+         bottom: 5%;
+        font-size: 30px;
+        border-radius: 5px;
+        border-style: none;
+        padding: 5px;
+        width: 100px;
+    }
+
+    #update-book-btn:hover {
+        cursor: pointer;
+    }
+
+    #confirm-book-btn:hover {
+        cursor: pointer;
+        background-color: darkgray;
+        color: #C1440D;
+        border: 2px solid black;
+    }
+
+    #update-book {
+        font-size: 30px;
+        border-radius: 5px;
+        border-style: none;
+        padding: 5px;
+        width: 120px;
+    }
+
+    #user-info {
+        display: flex;
+        margin-bottom: 40px;
+    }
+
+    .book-info {
+        display: flex;
+        border-bottom: 1px solid white;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .update {
+        display: flex;
+        justify-content: center;
+        border-radius: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+        outline: black;
+    }
+
+    .edit-btns {
+        position: absolute;
+        bottom: 20%;
+        left: 2%;
+    }
+    #edit-book-btn:hover {
+        cursor: pointer;
+    }
+    #done-book-btn {
+        cursor: pointer;
+    }
+    .price-sum {
+        position: absolute;
+        left: 40%;
+        bottom: 5%;
+    }
+
+    #trips-btn {
+        font-size: 30px;
+        height: 60px;
+        border: 3px white solid;
+        background-color: black;
+        color: white;
+    }
+
+    #trips-btn:hover {
+        cursor: pointer;
+        transition: ease-in-out .4s;
+        color:#C1440D;
+    }
+    #delete-bk-btn:hover {
+        cursor: pointer;
+    }
+
+    
+
+
+
+ 
+  
     
 
 
@@ -669,7 +783,7 @@ html * {
 
 
       .confirm-con {
-          background-color: #C1440D;
+          /* background-color: #C1440D; */
       }
    
  
