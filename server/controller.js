@@ -47,15 +47,19 @@ module.exports = {
     },
 
     createTrip: (req, res) => {
-        const {userId, city, weight, ticket, dateSlct} = req.body
+        const {userId, city, weight, ticketQty, dateSlct} = req.body
 
         sequelize.query(`INSERT INTO trips(user_id, city, date, weight, qty)
-        VALUES ('${userId}', '${city}', '${dateSlct}', '${weight}', '${ticket}');`)
+        VALUES ('${userId}', '${city}', '${dateSlct}', '${weight}', '${ticketQty}');`)
         
         res.status(200).send('Trip Created!')
     },
 
-    getTrip: (req, res) => {
-
+    getTrips: (req, res) => {
+        const {userId} = req.body
+       sequelize.query(`SELECT * FROM trips WHERE '${userId}' = user_id;`)
+       .then(dbRes => {
+           console.log(dbRes[0][0]);
+       } )
     }
 }

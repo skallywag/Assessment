@@ -601,6 +601,7 @@ html * {
         left: 42%;
         line-height: 25px;
         top: 35%;
+
     }
 
     .book-err {
@@ -646,17 +647,17 @@ html * {
     }
 
     #confirm-con {
-    background-color: #C1440D;
-    height: 53vh;
-    width: 58vw;
-    border-radius: 10px;
-    line-height: 30px;
-    font-size: 20px;
-    /* display: flex; */
-    flex-direction: column;
-    z-index: 98;
-    position: absolute;
-    top: 23%;
+        background-color: #C1440D;
+        height: 53vh;
+        width: 58vw;
+        border-radius: 10px;
+        line-height: 30px;
+        font-size: 20px;
+        /* display: flex; */
+        flex-direction: column;
+        z-index: 98;
+        position: absolute;
+        top: 23%;
     }
 
     .bk-confirm-title {
@@ -681,6 +682,9 @@ html * {
         border-style: none;
         padding: 5px;
         width: 100px;
+        background-color:darkgray;
+        color: #C1440D;
+        border: 2px solid black;
     }
 
     #update-book-btn:hover {
@@ -689,8 +693,8 @@ html * {
 
     #confirm-book-btn:hover {
         cursor: pointer;
-        background-color: darkgray;
-        color: #C1440D;
+        background-color: #C1440D;
+        color: darkgray;
         border: 2px solid black;
     }
 
@@ -728,16 +732,30 @@ html * {
         bottom: 20%;
         left: 2%;
     }
+    #edit-book-btn {
+        background-color: darkgray;
+        color: black;
+        border: 2px solid black;
+
+    }
     #edit-book-btn:hover {
         cursor: pointer;
+        background-color: #C1440D;
+        color: darkgray;
+        border: 2px solid black;
+        
     }
     #done-book-btn {
         cursor: pointer;
+        background-color: darkgray;
+        color: black;
+        border: 2px solid black;
     }
-    .price-sum {
-        position: absolute;
-        left: 40%;
-        bottom: 5%;
+    #done-book-btn:hover {
+        cursor: pointer;
+        background-color: #C1440D;
+        color: darkgray;
+        border: 2px solid black;
     }
 
     #trips-btn {
@@ -755,6 +773,15 @@ html * {
     }
     #delete-bk-btn:hover {
         cursor: pointer;
+        background-color: #C1440D;
+        color: darkgray;
+        border: 2px solid black;
+    }
+    #delete-bk-btn {
+        background-color: darkgray;
+        color: black;
+        border: 2px solid black;
+        margin-left: 10px;
     }
 
     
