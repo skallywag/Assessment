@@ -59,7 +59,12 @@ module.exports = {
         const {userId} = req.body
        sequelize.query(`SELECT * FROM trips WHERE '${userId}' = user_id;`)
        .then(dbRes => {
-           console.log(dbRes[0][0]);
+           res.status(200).send(dbRes[0])
        } )
+    },
+
+    deleteTrip: (req, res) => {
+        // console.log(req.body.item);
+        sequelize.query(`DELETE FROM trips WHERE '${req.body.item}' = id;`)
     }
 }

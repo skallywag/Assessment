@@ -1,3 +1,5 @@
+const { default: axios } = require("axios")
+
 
 
 // const calBtn = document.getElementById('cal-btn')
@@ -21,9 +23,11 @@ bookForm.addEventListener('submit', (e) => {
         document.getElementById('payload').value = ''
         document.getElementById('ticket-qty').value = 'QTY'
         document.getElementById('date-slct').value = 'mm/dd/yyyy'
+
         
         let user = JSON.parse(localStorage.getItem('user'))
         let userId = user.id
+
         
         const card = `
             <h1 class="bk-confirm-title">Your Ticket Info:</h1>
@@ -81,23 +85,21 @@ bookForm.addEventListener('submit', (e) => {
        })
 
        doneBtn.addEventListener('click', () => {
-        let cities = ['', '', '',]
+        // let cities = ['', '', '',]
            for(let i = 0; i < updateInfo.length; i++){
                updateInfo[i].contentEditable = 'false'
                updateInfo[i].style.backgroundColor = '#C1440D'
            }
+           if(updateTicketQty.innerHTML > 4){
+               alert('enet calid')
+               updateTicketQty.innerHTML = '*'
+           }
+        
            weight = updateWeight.innerHTML
            ticketQty = updateTicketQty.innerHTML
            dateSlct = dateUpdate.innerHTML
-        //    console.log(dateSlct);
 
-           document.getElementById('price').innerHTML = ticketPrice = weight * ticketQty * 1000
-
-           if(ticketQty > 4){
-            alert('please enter valid ticket qty.')
-           }
-           
-             
+           document.getElementById('price').innerHTML = ticketPrice = weight * ticketQty * 1000 
        })
 
        const deleteBtn = document.getElementById('delete-bk-btn')
@@ -111,6 +113,17 @@ bookForm.addEventListener('submit', (e) => {
             if(confrmCon.style.display === 'flex'){
                 confrmCon.style.display = 'none'
             }
+
+            const success = document.getElementById('success-con')
+            if(success.style.display === 'none'){
+                success.style.display = 'flex'
+                
+                setTimeout(hideElement, 3000)
+                function hideElement() {
+                success.style.display = 'none'
+                }
+            }
+
             axios.post('http://localhost:5432/api/trips', {userId, city, weight, ticketQty, dateSlct})
             .then(res => {
                 console.log(res)
@@ -142,7 +155,7 @@ function bookValidate(input){
         document.getElementById('qtyErr').innerHTML = errors.ticketQty
     }
 
-    if(input.dateSlct == 'mm/dd/yyyy'){
+    if(input.dateSlct === 'mm/dd/yyyy'){
         console.log(errors.dateSlct)
         errors.dateSlct = `<span>Please select a date</span>`
         document.getElementById('dateErr').innerHTML = errors.dateSlct
@@ -152,32 +165,65 @@ function bookValidate(input){
        const logReq = document.getElementById('login-required')
        logReq.innerHTML = `Please Login`
     }
-
-    
-
-
-    
+   
+   
     if(Object.keys(errors).length === 0) return true
     console.log(errors)
     return false
 }
 
+
 const getTripsBtn = document.getElementById('trips-btn')
 getTripsBtn.addEventListener('click', () => {
-
+    
     let user = JSON.parse(localStorage.getItem('user'))
     let userId = user.id
     // console.log(userId)
-
+    
     axios.post('http://localhost:5432/api/getTrips', {userId})
     .then((res) => {
-        console.log(res.data);
+        const tripsArr = res.data
+        
+        let tripCards = tripsArr.map(item => {
+            return `<li class="trip-card">
+            <div>
+            <button id="close-trip">X</button>
+            </div>
+            <div>
+            <h1 class="trip-title">Trip:</h1>
+            <h2 class="trip-head">City: ${item.city}</h2>
+            <h2 class="trip-head">Trip-Date: ${item.date}</h2>
+            <h2 class="trip-head">Payload: ${item.weight}</h2>
+            <h2 class="trip-head">Ticket-qty: ${item.qty}</h2>
+            <button id="delete-trip" onclick="deleteTrip(${item.id})">Delete Trip</button>            
+            </div>
+            </li>`
+        })
+        document.getElementById('trip-parent').innerHTML = tripCards
+        
+        
+        // const deleteTrip = document.getElementById('delete-trip')
+        // deleteTrip.addEventListener('click', () => {
+            // })
+            
+            
+        })
     })
-})
-
-
-
-
+    const deleteTrip = (item) => {
+        console.log(item);
+        axios.delete('http://localhost:5432/api/deleteTrip/', {data: {item}})
+        .then(res => {
+            if(res.status(200)){
+                getTrips()
+            }
+        })
+    }
+    
+    
+    
+    
+    
+    
 
 
 

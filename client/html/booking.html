@@ -114,8 +114,8 @@
             <form id="booking-form">
                 <div class="custom-select">
                     <select id="book-city" name="custom-select">
+                      <!-- <option value="City:">City:</option> -->
                       <option value="City:">City:</option>
-                      <option value="0">City:</option>
                       <option value="Phoenexia">Phoenexia</option>
                       <option value="CHYRSE">CHYRSE</option>
                       <option value="Proxima">Proxima</option>
@@ -142,19 +142,30 @@
                     <button class="book-submit" type="submit"><i class="fas fa-arrow-circle-right"></i></button>
                 </div>      
             </form>
-            <div class="error-con">
+            <div id="error-con"> 
                 <div class="book-err" id="qtyErr"></div>
                 <div class="book-err" id="payloadErr"></div>
                 <div class="book-err" id="cityErr"></div>
                 <div class="book-err" id="dateErr"></div>
             </div>
-            <!-- <div id="book-success">Trip Created!</div> -->
+            <div id="success-con" style="display: none;">
+                <div id="book-success">Trip Created!</div>
+            </div>
             <div id="confirm-con" style="display: none;">
             </div>
             <div>
                 <button id="trips-btn">your trips</button>
             </div>
         </section>
+        <section class="trips-section">
+                        
+            <ul id="trip-parent">
+            </ul>
+            
+                    
+        </section>
+       
+
         
                 
 
@@ -166,3 +177,14 @@
 </body>
 </html>
 
+<!-- 
+<ul id="tripParent">
+    <li class="trip-card">
+        <h1 class="trip-title">Trip:</h1>
+        <h2 class="trip-head">City: ${city}</h2>
+        <h2 class="trip-head">Trip-Date: ${date}</h2>
+        <h2 class="trip-head">Payload ${weight}</h2>
+        <h2 class="trip-head">Ticket-qty: ${ticketQty}</h2>
+        <button class="delete-trip">Delete Trip</button>
+    </li>
+</ul> -->

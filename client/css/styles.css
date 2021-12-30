@@ -103,6 +103,10 @@ html * {
     color: skyblue;
 }
 
+.form-btn:hover {
+    color: black;
+}
+
 .signup-btn:hover {
     background-color: black;
     color: white;
@@ -119,10 +123,9 @@ html * {
     color:#C1440D;
     font-weight: bold;
     font-size: 15px;
-    position: absolute;
+    /* position: absolute; */
     top: 20px;
     left: 41%;
-
 }
 
 .login-btn {
@@ -405,7 +408,7 @@ html * {
           object-fit: cover;
           height: 100%;
           width: 100%;
-          position:fixed;
+            position: fixed;
           top: 0;
           left: 0;
           z-index: -1;
@@ -415,7 +418,7 @@ html * {
     .booking-main-con {
         position: relative;
         width: 100vw;
-        height: 100vh;
+        height: 80vh;
         overflow: hidden;
         flex-direction: column;
         text-align: center;
@@ -479,9 +482,9 @@ html * {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 10px;
+        /* padding: 10px; */
         gap: 10px;
-        margin-bottom: 30px;
+        /* margin-bottom: 30px; */
     }
 
     
@@ -592,8 +595,8 @@ html * {
         right: 11%;
     }
 
-    .error-con {
-        /* background-color: black; */
+    /* #error-con {
+        background-color: black;
         text-align: left;
         padding: 20px;
         border-radius: 5px;
@@ -601,17 +604,19 @@ html * {
         left: 42%;
         line-height: 25px;
         top: 35%;
-
-    }
+    } */
 
     .book-err {
         color: whitesmoke;
         font-size: 18px;
         opacity: 300%;
         border-radius: 5px;
-        /* border-bottom: 1px solid black; */
         border-bottom: 1px solid black;
         color: #C1440D;
+        /* background-color: black; */
+        /* padding-top: 5px; */
+        /* line-height: 25px; */
+        margin-bottom: 5px;
     }
 
     #userBook-con {
@@ -648,7 +653,7 @@ html * {
 
     #confirm-con {
         background-color: #C1440D;
-        height: 53vh;
+        height: 57vh;
         width: 58vw;
         border-radius: 10px;
         line-height: 30px;
@@ -764,6 +769,8 @@ html * {
         border: 3px white solid;
         background-color: black;
         color: white;
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
 
     #trips-btn:hover {
@@ -782,6 +789,71 @@ html * {
         color: black;
         border: 2px solid black;
         margin-left: 10px;
+    }
+
+    #book-success {
+        font-size: 60px;
+    }
+    #success-con {
+        background-color: #C1440D;
+        margin-bottom: 40px;
+        border-radius: 10px;
+        padding: 10px;
+        z-index: 96;
+    }
+    .trip-title {
+        font-size: 60px;
+        align-self: center;
+        text-align: center;
+        border-bottom: 2px solid white;
+        margin-bottom: 20px;
+    }
+    #trip-parent {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .trip-head {
+        font-size: 35px;
+        border-bottom: 1px solid;
+    }
+    .trip-card {
+        background-color: #C1440D;
+        padding: 40px;
+        border-radius: 10px;
+        margin: 10px;
+        height: 280px;
+        font-family: 'Righteous', cursive;
+        line-height: 45px;
+        display: flex;
+    }
+
+    #delete-trip {
+        font-size: 20px;
+        height: 40px;
+        border: 2px white solid;
+        position: absolute;
+        /* bottom: -300px; */
+        color: white;
+        background-color: black;
+        margin-top: 15px;
+    }
+    #delete-trip:hover {
+        cursor: pointer;
+        background-color: #C1440D;
+        color: black;
+    }
+    #close-trip {
+        background-color: black;
+        color: white;
+        bottom: 2%;
+        border-style: none;
+    }
+    #close-trip:hover {
+        cursor: pointer;
+        color: black;
+        background-color: #C1440D;
     }
 
     
