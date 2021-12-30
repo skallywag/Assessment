@@ -1,6 +1,3 @@
-const { default: axios } = require("axios")
-
-
 
 // const calBtn = document.getElementById('cal-btn')
 const bookForm = document.getElementById('booking-form')
@@ -173,50 +170,45 @@ function bookValidate(input){
 }
 
 
-const getTripsBtn = document.getElementById('trips-btn')
-getTripsBtn.addEventListener('click', () => {
-    
+const getTrip = () => {
+
     let user = JSON.parse(localStorage.getItem('user'))
     let userId = user.id
-    // console.log(userId)
+    console.log(userId)
     
     axios.post('http://localhost:5432/api/getTrips', {userId})
     .then((res) => {
         const tripsArr = res.data
         
         let tripCards = tripsArr.map(item => {
-            return `<li class="trip-card">
+            return `<li class="trip-card" id="trip-card-${item.id}">
             <div>
-            <button id="close-trip">X</button>
+                <button id="close-trip" onclick="closeCard(${item.id})">X</button>
             </div>
             <div>
-            <h1 class="trip-title">Trip:</h1>
-            <h2 class="trip-head">City: ${item.city}</h2>
-            <h2 class="trip-head">Trip-Date: ${item.date}</h2>
-            <h2 class="trip-head">Payload: ${item.weight}</h2>
-            <h2 class="trip-head">Ticket-qty: ${item.qty}</h2>
-            <button id="delete-trip" onclick="deleteTrip(${item.id})">Delete Trip</button>            
+                <h1 class="trip-title">Trip:</h1>
+                <h2 class="trip-head">City: ${item.city}</h2>
+                <h2 class="trip-head">Trip-Date: ${item.date}</h2>
+                <h2 class="trip-head">Payload: ${item.weight}</h2>
+                <h2 class="trip-head">Ticket-qty: ${item.qty}</h2>
+                <button id="delete-trip" onclick="deleteTrip(${item.id})">Delete Trip</button>            
             </div>
             </li>`
         })
-        document.getElementById('trip-parent').innerHTML = tripCards
-        
-        
-        // const deleteTrip = document.getElementById('delete-trip')
-        // deleteTrip.addEventListener('click', () => {
-            // })
-            
-            
-        })
+        document.getElementById('trip-parent').innerHTML = tripCards            
     })
+}
     const deleteTrip = (item) => {
-        console.log(item);
+        // console.log(item);
         axios.delete('http://localhost:5432/api/deleteTrip/', {data: {item}})
-        .then(res => {
-            if(res.status(200)){
-                getTrips()
-            }
+        .then(() => {
+            getTrip()
         })
+    }
+
+    function closeCard(id){
+        const card = document.getElementById(`trip-card-${id}`)
+        card.classList.add('hide') 
     }
     
     

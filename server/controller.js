@@ -66,5 +66,8 @@ module.exports = {
     deleteTrip: (req, res) => {
         // console.log(req.body.item);
         sequelize.query(`DELETE FROM trips WHERE '${req.body.item}' = id;`)
+        .then(dbRes => {
+            res.status(200).send(true)
+        })
     }
 }
