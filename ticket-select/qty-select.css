@@ -1,16 +1,17 @@
-.custom-select {
+.qty-select {
     position:relative;
-    width: 230px;
+    /* width: 230px; */
   }
   
-  .custom-select select {
+  .qty-select select {
     display: none; /*hide original SELECT element: */
   }
   
-  .select-selected {
+  .qty-selected {
     background-color: #C1440D;
     font-size: 30px;
     border-radius: 5px;
+    width: 90px;
   }
   
   /* Style the arrow inside the select element: */
@@ -56,4 +57,5 @@
   
   .select-items div:hover, .same-as-selected {
     background-color: #C1440D;
+    border-radius: 5px;
   }

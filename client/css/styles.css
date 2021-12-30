@@ -471,7 +471,10 @@ html * {
     .cal-con {
         display: flex;
         justify-content: center;
-     
+    }
+
+    .cal-wrapper {
+        height: 100vh;
     }
 
     .fas {
@@ -512,7 +515,6 @@ html * {
         border-radius: 5px;
         border-style: none;
         outline: none;
-
       }
 
       .cal-date:hover {
@@ -554,17 +556,17 @@ html * {
         border-radius: 5px;
         appearance: none;
         text-align: center;
-        width: 100px;
+        width: 10px;
         display: flex;
         align-items: center;
     }
 
-    .qty-select {
+    /* .qty-select {
         position: relative;
         line-height: 3;
         background-color: #C1440D;  
         border-radius: 5px;
-    }
+    } */
 
    
     /* .qty-select select {

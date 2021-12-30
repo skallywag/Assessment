@@ -82,16 +82,12 @@ bookForm.addEventListener('submit', (e) => {
        })
 
        doneBtn.addEventListener('click', () => {
-        // let cities = ['', '', '',]
+
            for(let i = 0; i < updateInfo.length; i++){
                updateInfo[i].contentEditable = 'false'
                updateInfo[i].style.backgroundColor = '#C1440D'
            }
-           if(updateTicketQty.innerHTML > 4){
-               alert('enet calid')
-               updateTicketQty.innerHTML = '*'
-           }
-        
+           city = updateCity.innerHTML
            weight = updateWeight.innerHTML
            ticketQty = updateTicketQty.innerHTML
            dateSlct = dateUpdate.innerHTML

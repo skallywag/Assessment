@@ -127,6 +127,7 @@ loginForm.addEventListener('submit', (e) => {
             localStorage.removeItem('user')
             localStorage.setItem('user', JSON.stringify(res.data))
                 checkUser()
+                checkUser2()
                 
                 const user = JSON.parse(localStorage.getItem('user'))
                 document.getElementById('log-success').innerHTML = `Welcome Back ${user.name}!`

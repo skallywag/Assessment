@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/client/css/reset.css">
     <link rel="stylesheet" href="/js-calendar-main/app.css" />
     <link rel="stylesheet" href="../custom-select/city-select.css">
+    <link rel="stylesheet" href="/ticket-select/qty-select.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/7059431f06.js" crossorigin="anonymous"></script>
@@ -130,7 +131,7 @@
                     <input id="payload" placeholder="Payload/lb" type="text">
                 </div>
                 <div class="qty-select">
-                    <select class="qty" name="ticket" id="ticket-qty">
+                    <select class="qty" name="qty-select" id="ticket-qty">
                         <option value="QTY">QTY</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -139,9 +140,47 @@
                     </select>
                 </div>
                 <div>
-                    <button class="book-submit" type="submit"><i class="fas fa-arrow-circle-right"></i></button>
-                </div>      
+                    <button class="book-submit" type="submit"><i class="fas fa-arrow-circle-right"></i></button>     
+                </div>       
             </form>
+            <div class="cal-wrapper" style="display: none;">
+                <div class="calendar">
+                    <div class="calendar-header">
+                        <span class="month-picker" id="month-picker">February</span>
+                        <div class="year-picker">
+                            <span class="year-change" id="prev-year">
+                                <pre><</pre>
+                            </span>
+                            <span id="year">2021</span>
+                            <span class="year-change" id="next-year">
+                                <pre>></pre>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="calendar-body">
+                        <div class="calendar-week-day">
+                            <div>Sun</div>
+                            <div>Mon</div>
+                            <div>Tue</div>
+                            <div>Wed</div>
+                            <div>Thu</div>
+                            <div>Fri</div>
+                            <div>Sat</div>
+                        </div>
+                        <div class="calendar-days"></div>
+                    </div>
+                    <div class="calendar-footer">
+                        <div class="toggle">
+                            <span>Dark Mode</span>
+                            <div class="dark-mode-switch">
+                                <div class="dark-mode-switch-ident"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="month-list"></div>
+                </div>
+            </div>
+            
             <div id="error-con"> 
                 <div class="book-err" id="qtyErr"></div>
                 <div class="book-err" id="payloadErr"></div>
@@ -169,7 +208,8 @@
         
                 
      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="../custom-select/city-select.js"></script>
+     <script src="../custom-select/city-select.js"></script>
+     <script src="/ticket-select/qty-select.js"></script>
     <script src="/client/JS/script.js"></script>
     <script src="/client/JS/booking.js"></script>
     <script src="/js-calendar-main/app.js"></script>
