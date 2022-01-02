@@ -1,5 +1,17 @@
 
 // const calBtn = document.getElementById('cal-btn')
+// const cal = document.querySelector('.calendar')
+// cal.classList.add('hide')
+
+// calBtn.addEventListener('click', () => {
+//     cal.classList.remove('hide')
+// })
+
+// const day = document.querySelectorAll('.calender-day-hover')
+
+
+
+
 const bookForm = document.getElementById('booking-form')
 
 bookForm.addEventListener('submit', (e) => {
@@ -16,9 +28,9 @@ bookForm.addEventListener('submit', (e) => {
     
     
     if(bookValidate({city, weight, ticketQty, dateSlct})){
-        document.getElementById('book-city').value = 'City:'
+        document.getElementById('book-city').value = ''
         document.getElementById('payload').value = ''
-        document.getElementById('ticket-qty').value = 'QTY'
+        document.getElementById('ticket-qty').value = ''
         document.getElementById('date-slct').value = 'mm/dd/yyyy'
 
         

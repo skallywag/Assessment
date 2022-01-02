@@ -418,7 +418,7 @@ html * {
     .booking-main-con {
         position: relative;
         width: 100vw;
-        height: 80vh;
+        height: 100vh;
         overflow: hidden;
         flex-direction: column;
         text-align: center;
@@ -468,14 +468,14 @@ html * {
     #pay-load {
         width: 150px;
     }
-    .cal-con {
+    /* .cal-con {
         display: flex;
         justify-content: center;
     }
 
     .cal-wrapper {
         height: 100vh;
-    }
+    } */
 
     .fas {
         font-size: 30px;
@@ -491,7 +491,7 @@ html * {
     }
 
     
-    /* .cal-btn {
+    .cal-btn {
           font-size: 30px;
           background-color: #C1440D;
           color: white;
@@ -505,7 +505,7 @@ html * {
           color: #C1440D;
           background-color: white;
           transition: 1s;
-      } */
+      }
 
     .cal-date {
         font-size: 20px;
@@ -588,8 +588,10 @@ html * {
     }
     .book-submit:hover {
         cursor: pointer;
+        
     }
 
+    
     #loggedName {
         color: white;
         font-size: 30px;
@@ -764,7 +766,7 @@ html * {
         color: darkgray;
         border: 2px solid black;
     }
-
+/* 
     #trips-btn {
         font-size: 30px;
         height: 60px;
@@ -779,7 +781,55 @@ html * {
         cursor: pointer;
         transition: ease-in-out .4s;
         color:#C1440D;
-    }
+       
+    } */
+    
+    #trips-btn {
+        position: relative;
+        /* margin: 300px auto 0; */
+        width: 200px;
+        height: 60px;
+        background: linear-gradient(0deg, #000, #272727);
+        color: white;
+        font-size: 20px;
+        border-style: none;
+      }
+      
+      #trips-btn:before, #trips-btn:after {
+        content: '';
+        position: absolute;
+        left: -2px;
+        top: -2px;
+        background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+          #0000ff, #00ff00,#ffff00, #ff0000);
+        background-size: 400%;
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        z-index: -1;
+        animation: steam 20s linear infinite;
+      }
+      
+      @keyframes steam {
+        0% {
+          background-position: 0 0;
+        }
+        50% {
+          background-position: 400% 0;
+        }
+        100% {
+          background-position: 0 0;
+        }
+      }
+      
+      #trips-btn:after {
+        filter: blur(50px);
+      }
+
+      #trips-btn:hover {
+          cursor: pointer;
+          color: #C1440D;
+      }
+      
     #delete-bk-btn:hover {
         cursor: pointer;
         background-color: #C1440D;

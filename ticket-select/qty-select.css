@@ -1,6 +1,6 @@
 .qty-select {
     position:relative;
-    /* width: 230px; */
+    width: 110px;
   }
   
   .qty-select select {
@@ -11,7 +11,7 @@
     background-color: #C1440D;
     font-size: 30px;
     border-radius: 5px;
-    width: 90px;
+    /* width: 90px; */
   }
   
   /* Style the arrow inside the select element: */

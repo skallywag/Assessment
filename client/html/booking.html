@@ -115,7 +115,6 @@
             <form id="booking-form">
                 <div class="custom-select">
                     <select id="book-city" name="custom-select">
-                      <!-- <option value="City:">City:</option> -->
                       <option value="City:">City:</option>
                       <option value="Phoenexia">Phoenexia</option>
                       <option value="CHYRSE">CHYRSE</option>
@@ -143,7 +142,7 @@
                     <button class="book-submit" type="submit"><i class="fas fa-arrow-circle-right"></i></button>     
                 </div>       
             </form>
-            <div class="cal-wrapper" style="display: none;">
+            <div id="cal-wrapper" style="display: none;">
                 <div class="calendar">
                     <div class="calendar-header">
                         <span class="month-picker" id="month-picker">February</span>
@@ -179,8 +178,7 @@
                     </div>
                     <div class="month-list"></div>
                 </div>
-            </div>
-            
+            </div>     
             <div id="error-con"> 
                 <div class="book-err" id="qtyErr"></div>
                 <div class="book-err" id="payloadErr"></div>
@@ -193,16 +191,16 @@
             <div id="confirm-con" style="display: none;">
             </div>
             <div>
-                <button id="trips-btn" onclick="getTrip()">your trips</button>
+                    <button id="trips-btn" onclick="getTrip()">Your Trips</button>
             </div>
         </section>
-        <section class="trips-section">
-                        
+        <section id="trips-section" class="trips-section">                      
             <ul id="trip-parent">
-            </ul>
-            
-                    
+            </ul>             
         </section>
+
+        
+       
        
 
         
