@@ -88,8 +88,6 @@ html * {
     border-color: #C1440D;
 }
 
-
-
 .form-btn {
     background-color:#C1440D;
     border-style: none;
@@ -231,6 +229,7 @@ html * {
       margin-left: 5px;
       transition: color 1s ease-in-out;
   }
+
   #zip-btn:hover {
       color: #C1440D;
       cursor: pointer;
@@ -250,6 +249,7 @@ html * {
       background-color: #C1440D;
       cursor: pointer;
   }
+
   .weather-con {
       display: flex;
       margin-left: 20px;
@@ -288,7 +288,7 @@ html * {
              rgb(148, 41, 14) 50%,
              rgba(0,0,0,0) calc(50% + 0.8px),
              rgba(0,0,0,0) 100%);
-}
+  }
   
   .location {
       color: lightskyblue;
@@ -359,12 +359,14 @@ html * {
         justify-content: space-evenly;
         margin-bottom: 80px;
     }
+
     .mars-list {
         border-bottom: 1px solid white ;
         line-height: 40px;
         font-size: 20px;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
+
     .right {
         text-align: right;
     }
@@ -458,6 +460,7 @@ html * {
         border:none;
         padding: 10px;
     }
+
     .book-input:hover{
         cursor: pointer;
         background-color: whitesmoke;
@@ -468,6 +471,7 @@ html * {
     #pay-load {
         width: 150px;
     }
+
     /* .cal-con {
         display: flex;
         justify-content: center;
@@ -481,6 +485,7 @@ html * {
         font-size: 30px;
         width: 40px;
     }
+
     #booking-form {
         display: flex;
         justify-content: center;
@@ -490,7 +495,6 @@ html * {
         /* margin-bottom: 30px; */
     }
 
-    
     .cal-btn {
           font-size: 30px;
           background-color: #C1440D;
@@ -498,14 +502,14 @@ html * {
           padding: 5px;
           border-radius: 5px;
           border-style: none;
-      }
+    }
 
     .cal-btn:hover {
           cursor: pointer;
           color: #C1440D;
           background-color: white;
           transition: 1s;
-      }
+    }
 
     .cal-date {
         font-size: 20px;
@@ -515,16 +519,16 @@ html * {
         border-radius: 5px;
         border-style: none;
         outline: none;
-      }
+    }
 
-      .cal-date:hover {
+    .cal-date:hover {
           cursor: pointer;
-      }
+    }
 
     .cal-slct {
           outline: none;
           border-style: none;
-      }
+    }
 
     #payload {
           width: 100px;
@@ -537,12 +541,13 @@ html * {
           color: #C1440D;
           text-align: center;
           outline: none;
-      }
+    }
+
     #payload::placeholder {
           font-size: 18px;
           color: #C1440D;
           text-align: center;
-      }
+    }
 
 
     .qty {
@@ -577,21 +582,23 @@ html * {
         color: #C1440D;
         font-size: 80px;
     }
+
     .fas:hover {
         color: white;
         transition: 1.5s;
     }
+
     .book-submit {
         background: none;
         border: none;
         
     }
+
     .book-submit:hover {
         cursor: pointer;
         
     }
 
-    
     #loggedName {
         color: white;
         font-size: 30px;
@@ -651,6 +658,7 @@ html * {
         position: absolute;
         top: 15px;
     }
+
     .dest-title {
         margin-right: 15px;
     }
@@ -741,12 +749,14 @@ html * {
         bottom: 20%;
         left: 2%;
     }
+
     #edit-book-btn {
         background-color: darkgray;
         color: black;
         border: 2px solid black;
 
     }
+
     #edit-book-btn:hover {
         cursor: pointer;
         background-color: #C1440D;
@@ -754,19 +764,21 @@ html * {
         border: 2px solid black;
         
     }
+
     #done-book-btn {
         cursor: pointer;
         background-color: darkgray;
         color: black;
         border: 2px solid black;
     }
+
     #done-book-btn:hover {
         cursor: pointer;
         background-color: #C1440D;
         color: darkgray;
         border: 2px solid black;
     }
-/* 
+
     #trips-btn {
         font-size: 30px;
         height: 60px;
@@ -782,11 +794,10 @@ html * {
         transition: ease-in-out .4s;
         color:#C1440D;
        
-    } */
+    }
     
-    #trips-btn {
+    /* #trips-btn {
         position: relative;
-        /* margin: 300px auto 0; */
         width: 200px;
         height: 60px;
         background: linear-gradient(0deg, #000, #272727);
@@ -800,21 +811,21 @@ html * {
         position: absolute;
         left: -2px;
         top: -2px;
-        background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+        background: linear-gradient(60deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
           #0000ff, #00ff00,#ffff00, #ff0000);
         background-size: 400%;
         width: calc(100% + 4px);
         height: calc(100% + 4px);
         z-index: -1;
-        animation: steam 20s linear infinite;
-      }
+        animation: steam 10s linear infinite;
+      } */
       
-      @keyframes steam {
+      /* @keyframes steam {
         0% {
           background-position: 0 0;
         }
         50% {
-          background-position: 400% 0;
+          background-position: 300% 0;
         }
         100% {
           background-position: 0 0;
@@ -823,12 +834,12 @@ html * {
       
       #trips-btn:after {
         filter: blur(50px);
-      }
+      } */
 
-      #trips-btn:hover {
+    #trips-btn:hover {
           cursor: pointer;
           color: #C1440D;
-      }
+    }
       
     #delete-bk-btn:hover {
         cursor: pointer;
@@ -836,6 +847,7 @@ html * {
         color: darkgray;
         border: 2px solid black;
     }
+
     #delete-bk-btn {
         background-color: darkgray;
         color: black;
@@ -846,6 +858,7 @@ html * {
     #book-success {
         font-size: 60px;
     }
+
     #success-con {
         background-color: #C1440D;
         margin-bottom: 40px;
@@ -853,13 +866,14 @@ html * {
         padding: 10px;
         z-index: 96;
     }
+
     .trip-title {
         font-size: 60px;
         align-self: center;
         text-align: center;
-        border-bottom: 2px solid white;
         margin-bottom: 20px;
     }
+
     #trip-parent {
         display: flex;
         flex-wrap: wrap;
@@ -868,8 +882,9 @@ html * {
 
     .trip-head {
         font-size: 35px;
-        border-bottom: 1px solid;
+        border-bottom: 1px solid white;
     }
+
     .trip-card {
         background-color: #C1440D;
         padding: 40px;
@@ -879,6 +894,7 @@ html * {
         font-family: 'Righteous', cursive;
         line-height: 45px;
         display: flex;
+        box-shadow: black 5px 5px;
     }
 
     #delete-trip {
@@ -891,25 +907,39 @@ html * {
         background-color: black;
         margin-top: 15px;
     }
+
     #delete-trip:hover {
         cursor: pointer;
         background-color: #C1440D;
         color: black;
     }
+
     #close-trip {
         background-color: black;
         color: white;
         bottom: 2%;
         border-style: none;
     }
+
     #close-trip:hover {
         cursor: pointer;
         color: black;
         background-color: #C1440D;
     }
+
     .hide {
         display: none;
     }
+
+    #trip-deleted {
+        color: #C1440D;
+        font-size: 30px;
+    }  
+
+    .price-sum {
+        margin-top: 20px;
+    } 
+
 
     
 

@@ -1,29 +1,15 @@
-
-// const calBtn = document.getElementById('cal-btn')
-// const cal = document.querySelector('.calendar')
-// cal.classList.add('hide')
-
-// calBtn.addEventListener('click', () => {
-//     cal.classList.remove('hide')
-// })
-
-// const day = document.querySelectorAll('.calender-day-hover')
-
-
-
-
 const bookForm = document.getElementById('booking-form')
 
 bookForm.addEventListener('submit', (e) => {
     e.preventDefault()
     let city = document.getElementById('book-city').value
-    // console.log(city);
+   
     let dateSlct = document.getElementById('date-slct').value
-    // console.log(dateSlct);
+    
     let weight = document.getElementById('payload').value
-    // console.log(weight);
+   
     let ticketQty = document.getElementById('ticket-qty').value
-    // console.log(ticket);
+ 
     let ticketPrice = weight * ticketQty * 1000
     
     
@@ -32,12 +18,10 @@ bookForm.addEventListener('submit', (e) => {
         document.getElementById('payload').value = ''
         document.getElementById('ticket-qty').value = ''
         document.getElementById('date-slct').value = 'mm/dd/yyyy'
-
-        
+  
         let user = JSON.parse(localStorage.getItem('user'))
         let userId = user.id
-
-        
+ 
         const card = `
             <h1 class="bk-confirm-title">Your Ticket Info:</h1>
         <div class="confirm-ticket">
@@ -77,7 +61,6 @@ bookForm.addEventListener('submit', (e) => {
         document.getElementById('price').innerHTML = ticketPrice
         console.log(ticketPrice);
         
-
        if(confrmCon.style.display === 'none'){
             confrmCon.style.display = 'flex'
        }
@@ -113,7 +96,7 @@ bookForm.addEventListener('submit', (e) => {
        })
 
         const bookBtn = document.getElementById('confirm-book-btn')
-        // console.log(bookBtn);
+
         bookBtn.addEventListener('click', () => {
             if(confrmCon.style.display === 'flex'){
                 confrmCon.style.display = 'none'
@@ -128,7 +111,6 @@ bookForm.addEventListener('submit', (e) => {
                 success.style.display = 'none'
                 }
             }
-
             axios.post('http://localhost:5432/api/trips', {userId, city, weight, ticketQty, dateSlct})
             .then(res => {
                 console.log(res)
@@ -141,7 +123,7 @@ bookForm.addEventListener('submit', (e) => {
 function bookValidate(input){
     const user = JSON.parse(localStorage.getItem('user'))
     let errors = {}
-    // console.log(input.city, 'city')
+
     if(input.city === 'City:'){
         console.log(errors.city)
         errors.city = `<span>please select a destination</span>`
@@ -149,7 +131,7 @@ function bookValidate(input){
     }
     
     if(input.weight === 0 || input.weight === ''){
-        console.log(errors.weight);
+        console.log(errors.weight)
         errors.weight = `<span>please enter a payload</span>`
         document.getElementById('payloadErr').innerHTML = errors.weight
     }
@@ -203,38 +185,35 @@ const getTrip = () => {
             </div>
             </li>`
         })
-        document.getElementById('trip-parent').innerHTML = tripCards            
+        document.getElementById('trip-parent').innerHTML = tripCards      
     })
 }
     const deleteTrip = (item) => {
-        // console.log(item);
-        axios.delete('http://localhost:5432/api/deleteTrip/', {data: {item}})
+       
+        axios.delete('http://localhost:5432/api/deleteTrip/', {data: {item}}) 
         .then(() => {
             getTrip()
+            const deletemsg = document.getElementById('trip-deleted')
+            if(deletemsg.style.display === 'none'){
+                deletemsg.style.display = 'flex'
+            }
+            setTimeout(hideElement, 4000)
+            function hideElement() {
+            deletemsg.style.display = 'none'
+            }
         })
     }
 
     function closeCard(id){
         const card = document.getElementById(`trip-card-${id}`)
-        card.classList.add('hide') 
+        card.classList.add('hide')
     }
-    
-    
-    
-    
-    
-    
-
-
-
-
-
 
 function checkUser(){
     const logOut = document.querySelector('.log-out')
-    // console.log(logOut)
+    
     const accBtns = document.getElementById('acc-btns')
-    // console.log(accBtns);
+  
     const loggedName = document.getElementById('loggedName')
 
     const user = JSON.parse(localStorage.getItem('user'))

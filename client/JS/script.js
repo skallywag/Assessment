@@ -1,13 +1,12 @@
 const createForm = document.querySelector('#create-form')
-// console.log(createForm);
+
 const loginForm = document.querySelector('#login-form')
-// console.log(loginForm);
+
 const error = document.getElementById('error')
 
 const zipBtn = document.getElementById('zip-btn')
-// console.log(zipBtn);
-const tempCard = document.getElementById('temp-card')
 
+const tempCard = document.getElementById('temp-card')
 
 function closeForm(){
     const createForm = document.querySelector('.form-con')
@@ -60,7 +59,6 @@ createForm.addEventListener('submit', (e) => {
             success.style.display = 'flex'
         }
         
-        
         axios.post('http://localhost:5432/api/users', {name, username, email, password})
         .then(res => {
             console.log(res)
@@ -111,19 +109,16 @@ loginForm.addEventListener('submit', (e) => {
     e.preventDefault()
     loginEmail = document.getElementById('login-email').value 
     loginPass = document.getElementById('login-pass').value
-    // console.log(loginEmail);
-    // console.log(userLogin);
-
+ 
     if(loginValid({loginEmail, loginPass})){
-        // console.log(userLogin);
-        // console.log(true);
+       
         document.getElementById('login-email').value = ''
         document.getElementById('login-pass').value = ''
         
         
         axios.post('http://localhost:5432/api/login', {loginEmail, loginPass})
         .then((res) => {
-            // console.log(res);
+           
             localStorage.removeItem('user')
             localStorage.setItem('user', JSON.stringify(res.data))
                 checkUser()
@@ -158,11 +153,11 @@ zipBtn.addEventListener('click', (e) => {
 
     axios.get(`https://api.weatherapi.com/v1/current.json?key=77781fb0f0734297b2603939211512&q=${zipCode}&aqi=no`)
     .then(res => {
-        // console.log(res.data);
+    
         let iconSrc = res.data.current.condition.icon
         const location = res.data.location.name
         let tempNum = res.data.current.temp_f
-         let tempInt = Math.round(tempNum)
+        let tempInt = Math.round(tempNum)
 
         let li = document.createElement('li')
         
@@ -188,13 +183,12 @@ zipBtn.addEventListener('click', (e) => {
 
 function checkUser2(){
     const logOut2 = document.querySelector('.log-out')
-    // console.log(logOut)
+
     const accBtns2 = document.getElementById('acc-btns')
-    // console.log(accBtns);
+    
     const loggedName2 = document.getElementById('loggedName')
 
     const user = JSON.parse(localStorage.getItem('user'))
-    // const userName = user.name
 
     if(user){
         logOut2.style.display = 'flex'
@@ -207,8 +201,6 @@ function checkUser2(){
     }
 }
 checkUser2()
-
-
 
 const logOutUser2 = () => {
    window.localStorage.removeItem('user')
@@ -224,8 +216,6 @@ const logOutUser2 = () => {
 const logOutBtn2 = document.getElementById('log-out')
 logOutBtn2.addEventListener('click', logOutUser2)
 
-
-// console.log(logOutBtn);
 
 
 
