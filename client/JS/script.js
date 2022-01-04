@@ -118,7 +118,7 @@ loginForm.addEventListener('submit', (e) => {
         
         axios.post('http://localhost:5432/api/login', {loginEmail, loginPass})
         .then((res) => {
-           
+            console.log(res.data);
             localStorage.removeItem('user')
             localStorage.setItem('user', JSON.stringify(res.data))
                 checkUser()
@@ -128,7 +128,14 @@ loginForm.addEventListener('submit', (e) => {
                 document.getElementById('log-success').innerHTML = `Welcome Back ${user.name}!`
             
         })
-        .catch(err => console.log(err))
+        .catch(err => {
+            if(err == 401){
+                document.getElementById('errPass').innerHTML = 'Wrong Email or Pass'
+            }
+            else {
+                document.getElementById('errUser').innerHTML = 'User not found'
+            }
+        })
     }
 })
 

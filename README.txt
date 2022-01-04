@@ -25,5 +25,14 @@ APIs:
 
 weatherapi.com
 
+DB:
+
+PostgreSQL, Postico
+2 Tables
+
+Font-Family:
+
+Righteous, cursive
+
 
 

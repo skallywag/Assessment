@@ -34,14 +34,13 @@ module.exports = {
                     res.status(200).send(results)
                     console.log('We found the user')
                         
-                }else {
-                    res.status(404)
-                    .send('Your password does not match.')
+                }if(results.password !== loginPass) {
+                    res.status(401).send('Pass does not match')
                 }
-                return
+            }   else {
+                res.status(404)
+                .send('We couldnt find the user')
             }
-            res.status(404)
-            .send('We couldnt find the user')
        })
        .catch(err => console.log('We could not find the user', err))
     },
