@@ -129,7 +129,7 @@ loginForm.addEventListener('submit', (e) => {
             
         })
         .catch(err => {
-            if(err == 401){
+            if(err){
                 document.getElementById('errPass').innerHTML = 'Wrong Email or Pass'
             }
             else {
