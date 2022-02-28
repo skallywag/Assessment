@@ -28,7 +28,7 @@ app.get("/css", (req, res) => {
 app.get("/css", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/css/helper.css"));
 });
-app.get("/css2", (req, res) => {
+app.get("/css", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/css/reset.css"));
 });
 
