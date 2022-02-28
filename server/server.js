@@ -39,7 +39,9 @@ let files = [
   "/css/helper.css",
   "/css/reset.css",
 ];
+
 app.get("/", function (req, res) {
+  console.log("hey im getting hit bro");
   files.forEach((file) => res.sendFile(__dirname + "/public" + file));
 });
 // app.get("/index", (req, res) => {
