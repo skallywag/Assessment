@@ -160,7 +160,7 @@ zipBtn.addEventListener('click', (e) => {
 
     axios.get(`https://api.weatherapi.com/v1/current.json?key=77781fb0f0734297b2603939211512&q=${zipCode}&aqi=no`)
     .then(res => {
-    
+        // console.log(res.data);
         let iconSrc = res.data.current.condition.icon
         const location = res.data.location.name
         let tempNum = res.data.current.temp_f
