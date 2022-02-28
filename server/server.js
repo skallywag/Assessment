@@ -16,10 +16,10 @@ const {
 app.use(express.json());
 app.use(cors());
 
-app.get("/", (req, res) => {
+app.get("/client/html", (req, res) => {
   res.sendFile(path.join(__dirname, "/client/html/index.html"));
 });
-app.get("/", (req, res) => {
+app.get("/client/html", (req, res) => {
   res.sendFile(path.join(__dirname, "/client/html/booking.html"));
 });
 app.get("/js", (req, res) => {
