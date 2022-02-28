@@ -30,17 +30,17 @@ app.use(cors());
 // });
 
 let files = [
-  "/client/html/booking.html",
-  "/client/JS/script.js",
-  "/client/html/index.html",
-  "/client/JS/script.js",
-  "/client/JS/booking.js",
-  "../client/css/styles.css",
-  "../client/css/helper.css",
-  "../client/css/reset.css",
+  "/html/booking.html",
+  "/JS/script.js",
+  "/html/index.html",
+  "/JS/script.js",
+  "/JS/booking.js",
+  "/css/styles.css",
+  "/css/helper.css",
+  "/css/reset.css",
 ];
 app.get("/", function (req, res) {
-  files.forEach((file) => res.sendFile(file, { root: __dirname }));
+  files.forEach((file) => res.sendFile(__dirname + "/public" + file));
 });
 // app.get("/index", (req, res) => {
 //   res.sendFile(path.join(__dirname, "/client/html/index.html"));
