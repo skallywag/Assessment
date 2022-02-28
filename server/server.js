@@ -40,7 +40,7 @@ let files = [
   "../client/css/reset.css",
 ];
 app.get("/", function (req, res) {
-  files.forEach((file) => res.sendFile(path.join(__dirname, file)));
+  files.forEach((file) => res.sendFile(file, { root: __dirname }));
 });
 // app.get("/index", (req, res) => {
 //   res.sendFile(path.join(__dirname, "/client/html/index.html"));
