@@ -1,5 +1,6 @@
 require("dotenv").config();
 const express = require("express");
+const path = require("path");
 const app = express();
 const cors = require("cors");
 const PORT = process.env.PORT || 4000;
@@ -18,7 +19,7 @@ app.use(cors());
 app.get("/js", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/JS/script.js"));
 });
-app.get("/js", (req, res) => {
+app.get("/js2", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/JS/booking.js"));
 });
 app.get("/css", (req, res) => {
@@ -27,7 +28,7 @@ app.get("/css", (req, res) => {
 app.get("/css", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/css/helper.css"));
 });
-app.get("/css", (req, res) => {
+app.get("/css2", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/css/reset.css"));
 });
 
