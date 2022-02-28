@@ -17,16 +17,16 @@ app.use(express.json());
 app.use(cors());
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "/client/index.html"));
+  res.sendFile(path.join(__dirname, "/client/html/index.html"));
+});
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "/client/html/booking.html"));
 });
 app.get("/js", (req, res) => {
   res.sendFile(path.join(__dirname, "/client/JS/script.js"));
 });
 app.get("/js2", (req, res) => {
   res.sendFile(path.join(__dirname, "/client/JS/booking.js"));
-});
-app.get("/booking", (req, res) => {
-  res.sendFile(path.join(__dirname, "/client/booking.html"));
 });
 app.get("/css", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/css/styles.css"));
