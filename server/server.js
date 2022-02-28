@@ -21,8 +21,14 @@ app.get("/js", (req, res) => {
 app.get("/js", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/JS/booking.js"));
 });
-app.get("/js", (req, res) => {
-  res.sendFile(path.join(__dirname, "./public/main.js"));
+app.get("/css", (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/css/styles.css"));
+});
+app.get("/css", (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/css/helper.css"));
+});
+app.get("/css", (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/css/reset.css"));
 });
 
 app.post("/api/users", createUser);
