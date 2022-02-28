@@ -22,9 +22,9 @@ app.use("/js", express.static(path.join(__dirname, "client")));
 // app.get("/client", (req, res) => {
 //   res.sendFile(path.join(__dirname, "/client/html/index.html"));
 // });
-// app.get("/client", (req, res) => {
-//   res.sendFile(path.join(__dirname, "/client/html/booking.html"));
-// });
+app.get("/booking", (req, res) => {
+  res.sendFile(path.join(__dirname, "/client/html/booking.html"));
+});
 app.get("/js", (req, res) => {
   res.sendFile(path.join(__dirname, "/client/JS/script.js"));
 });
@@ -46,5 +46,9 @@ app.post("/api/login", userLogin);
 app.post("/api/trips", createTrip);
 app.post("/api/getTrips", getTrips);
 app.delete("/api/deleteTrip", deleteTrip);
+
+app.get("/", (req, res) =>
+  res.sendFile(path.join(__dirname, "../client/html/index.html"))
+);
 
 app.listen(PORT, () => console.log(`up on ${PORT}`));
