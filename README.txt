@@ -1,5 +1,5 @@
 Welcome to my Web-site, Trip to Mars. 
-It is a website where you can book an affordable trip to the red planet.
+It is a website where you can book a trip to the red planet.
 
 Features of the website include: 
 A weather app where you can enter a zip code(USA only) and get current weather conditions.
