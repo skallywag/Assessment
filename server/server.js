@@ -16,12 +16,15 @@ const {
 app.use(express.json());
 app.use(cors());
 
-app.get("/client/html", (req, res) => {
-  res.sendFile(path.join(__dirname, "/client/html/index.html"));
-});
-app.get("/client/html", (req, res) => {
-  res.sendFile(path.join(__dirname, "/client/html/booking.html"));
-});
+app.use("/js", express.static(path.join(__dirname, "client")));
+// app.use("/js2", express.static(path.join(__dirname, "client/booking.js")));
+
+// app.get("/client", (req, res) => {
+//   res.sendFile(path.join(__dirname, "/client/html/index.html"));
+// });
+// app.get("/client", (req, res) => {
+//   res.sendFile(path.join(__dirname, "/client/html/booking.html"));
+// });
 app.get("/js", (req, res) => {
   res.sendFile(path.join(__dirname, "/client/JS/script.js"));
 });
