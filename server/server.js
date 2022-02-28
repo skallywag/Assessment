@@ -17,18 +17,24 @@ app.use(express.json());
 app.use(cors());
 
 app.get("/js", (req, res) => {
-  res.sendFile(path.join(__dirname, "../client/JS/script.js"));
+  res.sendFile(path.join(__dirname, "/client/JS/script.js"));
+});
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "/client/index.html"));
+});
+app.get("/booking", (req, res) => {
+  res.sendFile(path.join(__dirname, "/client/booking.html"));
 });
 app.get("/js2", (req, res) => {
-  res.sendFile(path.join(__dirname, "../client/JS/booking.js"));
+  res.sendFile(path.join(__dirname, "/client/JS/booking.js"));
 });
 app.get("/css", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/css/styles.css"));
 });
-app.get("/css", (req, res) => {
+app.get("/css2", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/css/helper.css"));
 });
-app.get("/css", (req, res) => {
+app.get("/css3", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/css/reset.css"));
 });
 
