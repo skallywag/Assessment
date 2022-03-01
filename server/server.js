@@ -31,7 +31,7 @@ app.use(cors());
 //   console.log("hey im getting hit bro");
 //   files.forEach((file) => res.sendFile(__dirname + "public" + file));
 // });
-app.get("/j", (req, res) => {
+app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public/html/index.html"));
   res.sendFile(path.join(__dirname, "public/css/styles.css"));
   res.sendFile(path.join(__dirname, "public/css/helper.css"));
