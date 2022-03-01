@@ -29,19 +29,19 @@ app.use(cors());
 
 // app.get("/", function (req, res) {
 //   console.log("hey im getting hit bro");
-//   files.forEach((file) => res.sendFile(__dirname + "public" + file));
+//   files.forEach((file) => res.sendFile(__dirname + "/public" + file));
 // });
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "public/html/index.html"));
-  res.sendFile(path.join(__dirname, "public/css/styles.css"));
-  res.sendFile(path.join(__dirname, "public/css/helper.css"));
-  res.sendFile(path.join(__dirname, "public/css/reset.css"));
-  res.sendFile(path.join(__dirname, "public/JS/script.js"));
+  res.sendFile(path.join(__dirname, "/public/html/index.html"));
+  res.sendFile(path.join(__dirname, "/public/css/styles.css"));
+  res.sendFile(path.join(__dirname, "/public/css/helper.css"));
+  res.sendFile(path.join(__dirname, "/public/css/reset.css"));
+  res.sendFile(path.join(__dirname, "/public/JS/script.js"));
 });
 
 app.get("/booking", (req, res) => {
-  res.sendFile(path.join(__dirname, "public/booking.html"));
-  res.sendFile(path.join(__dirname, "public/JS/booking.js"));
+  res.sendFile(path.join(__dirname, "/public/booking.html"));
+  res.sendFile(path.join(__dirname, "/public/JS/booking.js"));
 });
 
 app.post("/api/users", createUser);
