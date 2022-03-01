@@ -15,10 +15,7 @@ const {
 
 app.use(express.json());
 app.use(cors());
-// app.use(express.static(__dirname));
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../index.html"));
-});
+
 app.get("/index", (req, res) => {
   res.sendFile(path.join(__dirname, "../index.html"));
 });
@@ -39,6 +36,10 @@ app.get("/helper", (req, res) => {
 });
 app.get("/reset", (req, res) => {
   res.sendFile(path.join(__dirname, "../reset.css"));
+});
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "../index.html"));
 });
 
 app.post("/api/users", createUser);
