@@ -35,29 +35,17 @@ app.get("/helper", (req, res) => {
   res.sendFile(path.join(__dirname, "../helper.css"));
 });
 app.get("/ticket-select", (req, res) => {
-  res.sendFile(path.join(__dirname, "../qty-select.css"));
+  res.sendFile(path.join(__dirname, "../qty-select"));
 });
 app.get("/ticket-select", (req, res) => {
-  res.sendFile(path.join(__dirname, "../qty-select.js"));
+  res.sendFile(path.join(__dirname, "../qty-select"));
 });
 app.get("/city-select", (req, res) => {
-  res.sendFile(path.join(__dirname, "../city-select.css"));
+  res.sendFile(path.join(__dirname, "../city-select"));
 });
 app.get("/city-select", (req, res) => {
-  res.sendFile(path.join(__dirname, "../city-select.js"));
+  res.sendFile(path.join(__dirname, "../city-select"));
 });
-app.get(
-  "https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css",
-  (req, res) => {
-    res.sendFile(path.join(__dirname, "../city-select.css"));
-  }
-);
-app.get(
-  "https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css",
-  (req, res) => {
-    res.sendFile(path.join(__dirname, "../city-select.css"));
-  }
-);
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../index.html"));

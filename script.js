@@ -59,7 +59,7 @@ createForm.addEventListener("submit", (e) => {
     }
 
     axios
-      .post("http://localhost:5432/api/users", {
+      .post("/users", {
         name,
         username,
         email,
