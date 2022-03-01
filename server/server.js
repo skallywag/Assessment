@@ -50,12 +50,6 @@ app.get("/citySelectjs", (req, res) => {
 app.get("/citySelectcss", (req, res) => {
   res.sendFile(path.join(__dirname, "../citySelectcss.css"));
 });
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../citySelectjs.js"));
-});
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../citySelectcss.css"));
-});
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../index.html"));
