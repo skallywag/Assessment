@@ -16,29 +16,30 @@ const {
 app.use(express.json());
 app.use(cors());
 
-// let files = [
-//   "/html/booking.html",
-//   "/JS/script.js",
-//   "/html/index.html",
-//   "/JS/script.js",
-//   "/JS/booking.js",
-//   "/css/styles.css",
-//   "/css/helper.css",
-//   "/css/reset.css",
-// ];
+let files = [
+  "/html/booking.html",
+  "/JS/script.js",
+  "/html/index.html",
+  "/JS/script.js",
+  "/JS/booking.js",
+  "/css/styles.css",
+  "/css/helper.css",
+  "/css/reset.css",
+];
 
-// app.get("/", function (req, res) {
-//   console.log("hey im getting hit bro");
-//   files.forEach((file) => res.sendFile(__dirname + "/public" + file));
-// });
-app.get("/index", (req, res) => {
-  console.log("getting shamcked");
-  res.sendFile(path.join(__dirname, "/public/html/index.html"));
-  res.sendFile(path.join(__dirname, "/public/css/styles.css"));
-  res.sendFile(path.join(__dirname, "/public/css/helper.css"));
-  res.sendFile(path.join(__dirname, "/public/css/reset.css"));
-  res.sendFile(path.join(__dirname, "/public/JS/script.js"));
+app.get("*", function (req, res) {
+  console.log("hey im getting hit bro");
+  files.forEach((file) => res.sendFile(__dirname + "/public" + file));
 });
+// app.get("*", (req, res) => {
+//   console.log("getting shamcked");
+//   res.sendFile(file, { root: path.join(__dirname, "../public") });
+// res.sendFile(path.join(__dirname, "/public/html/index.html"));
+// res.sendFile(path.join(__dirname, "/public/css/styles.css"));
+// res.sendFile(path.join(__dirname, "/public/css/helper.css"));
+// res.sendFile(path.join(__dirname, "/public/css/reset.css"));
+// res.sendFile(path.join(__dirname, "/public/JS/script.js"));
+// });
 
 app.get("/booking", (req, res) => {
   res.sendFile(path.join(__dirname, "/public/booking.html"));
