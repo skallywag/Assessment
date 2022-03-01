@@ -15,7 +15,7 @@ const {
 
 app.use(express.json());
 app.use(cors());
-app.use(express.static("public"));
+app.use(express.static("../public"));
 
 let files = [
   "/html/booking.html",
@@ -30,7 +30,7 @@ let files = [
 
 app.get("*", function (req, res) {
   console.log("hey im getting hit bro");
-  files.forEach((file) => res.sendFile(__dirname + "/public" + file));
+  files.forEach((file) => res.sendFile(__dirname + "../public" + file));
 });
 // app.get("*", (req, res) => {
 //   console.log("getting shamcked");
