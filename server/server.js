@@ -50,6 +50,18 @@ app.get("/citySelectjs", (req, res) => {
 app.get("/citySelectcss", (req, res) => {
   res.sendFile(path.join(__dirname, "../citySelectcss.css"));
 });
+app.get(
+  "https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css",
+  (req, res) => {
+    res.sendFile(path.join(__dirname, "../citySelectcss.css"));
+  }
+);
+app.get(
+  "https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css",
+  (req, res) => {
+    res.sendFile(path.join(__dirname, "../citySelectcss.css"));
+  }
+);
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../index.html"));
