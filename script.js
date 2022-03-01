@@ -120,7 +120,7 @@ loginForm.addEventListener("submit", (e) => {
     document.getElementById("login-pass").value = "";
 
     axios
-      .post("http://localhost:5432/api/login", { loginEmail, loginPass })
+      .post("/5432/api/login", { loginEmail, loginPass })
       .then((res) => {
         console.log(res.data);
         localStorage.removeItem("user");
