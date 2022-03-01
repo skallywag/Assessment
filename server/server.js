@@ -28,14 +28,16 @@ let files = [
   "/css/reset.css",
 ];
 
-app.get("/js", function (req, res) {
-  res.sendFile(path.join(__dirname, "index.html"));
-});
-
 app.get("*", function (req, res) {
   console.log("hey im getting hit bro");
   files.forEach((file) => res.sendFile(__dirname + "../public" + file));
 });
+
+app.get("/", function (req, res) {
+  console.log("yoo");
+  res.sendFile(path.join(__dirname, "index.html"));
+});
+
 // app.get("*", (req, res) => {
 //   console.log("getting shamcked");
 //   res.sendFile(file, { root: path.join(__dirname, "../public") });
