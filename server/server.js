@@ -17,28 +17,28 @@ app.use(express.json());
 app.use(cors());
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "/index.html"));
+  res.sendFile(path.join(__dirname, "../index.html"));
 });
 app.get("/index", (req, res) => {
-  res.sendFile(path.join(__dirname, "/index.html"));
+  res.sendFile(path.join(__dirname, "../index.html"));
 });
 app.get("/booking", (req, res) => {
-  res.sendFile(path.join(__dirname, "/booking.html"));
+  res.sendFile(path.join(__dirname, "../booking.html"));
 });
 app.get("/script", (req, res) => {
-  res.sendFile(path.join(__dirname, "/script.js"));
+  res.sendFile(path.join(__dirname, "../script.js"));
 });
 app.get("/booking", (req, res) => {
-  res.sendFile(path.join(__dirname, "/booking.js"));
+  res.sendFile(path.join(__dirname, "../booking.js"));
 });
 app.get("/styles", (req, res) => {
-  res.sendFile(path.join(__dirname, "/styles.css"));
+  res.sendFile(path.join(__dirname, "../styles.css"));
 });
 app.get("/helper", (req, res) => {
-  res.sendFile(path.join(__dirname, "/helper.css"));
+  res.sendFile(path.join(__dirname, "../helper.css"));
 });
 app.get("/reset", (req, res) => {
-  res.sendFile(path.join(__dirname, "/reset.css"));
+  res.sendFile(path.join(__dirname, "../reset.css"));
 });
 
 app.post("/api/users", createUser);
