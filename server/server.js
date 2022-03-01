@@ -41,15 +41,18 @@ app.get("/reset", (req, res) => {
 app.get("/ticket-select", (req, res) => {
   res.sendFile(path.join(__dirname, "../qty-select.js"));
 });
-// app.get("/ticket-select", (req, res) => {
-//   res.sendFile(path.join(__dirname, "../qty-select.css"));
-// });
-app.get("/city-select", (req, res) => {
-  res.sendFile(path.join(__dirname, "../city-select.js"));
+app.get("/ticket-select", (req, res) => {
+  res.sendFile(path.join(__dirname, "../qty-select.css"));
 });
-// app.get("/city-select", (req, res) => {
-//   res.sendFile(path.join(__dirname, "../city-select.css"));
-// });
+app.get("/citySelect", (req, res) => {
+  res.sendFile(path.join(__dirname, "../citySelect.js"));
+});
+app.get(
+  "https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css",
+  (req, res) => {
+    res.sendFile(path.join(__dirname, "../citySelect.css"));
+  }
+);
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../index.html"));
