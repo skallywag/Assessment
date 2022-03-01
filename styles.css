@@ -564,12 +564,13 @@ video {
   display: flex;
   align-items: center;
 }
-.custom-select {
+
+.city-select {
   position: relative;
   width: 230px;
 }
 
-.custom-select select {
+.city-select select {
   display: none; /*hide original SELECT element: */
 }
 
