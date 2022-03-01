@@ -560,14 +560,20 @@ video {
   border-radius: 5px;
   appearance: none;
   text-align: center;
-  /* width: 10px; */
   display: flex;
   align-items: center;
 }
 
 .city-select {
-  position: relative;
   width: 230px;
+  border: none;
+  background: #c1440d;
+  color: white;
+  font-size: 30px;
+  padding: 4px;
+  outline: none;
+  border-radius: 5px;
+  text-align: center;
 }
 
 .city-select select {
