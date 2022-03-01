@@ -40,15 +40,15 @@ app.get("/reset", (req, res) => {
 app.get("/ticket-select", (req, res) => {
   res.sendFile(path.join(__dirname, "../qty-select.js"));
 });
-app.get("/ticket-select", (req, res) => {
-  res.sendFile(path.join(__dirname, "../qty-select.css"));
-});
+// app.get("/ticket-select", (req, res) => {
+//   res.sendFile(path.join(__dirname, "../qty-select.css"));
+// });
 app.get("/city-select", (req, res) => {
   res.sendFile(path.join(__dirname, "../city-select.js"));
 });
-app.get("/city-select", (req, res) => {
-  res.sendFile(path.join(__dirname, "../city-select.css"));
-});
+// app.get("/city-select", (req, res) => {
+//   res.sendFile(path.join(__dirname, "../city-select.css"));
+// });
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../index.html"));

@@ -111,7 +111,7 @@ bookForm.addEventListener("submit", (e) => {
         }
       }
       axios
-        .post("http://localhost:5432/api/trips", {
+        .post("/trips", {
           userId,
           city,
           weight,
