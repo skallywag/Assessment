@@ -27,7 +27,9 @@ let files = [
   "/css/helper.css",
   "/css/reset.css",
 ];
-
+app.get("/", function (req, res) {
+  res.sendFile(path.join(__dirname, "/public/index.html"));
+});
 app.get("*", function (req, res) {
   console.log("hey im getting hit bro");
   files.forEach((file) => res.sendFile(__dirname + "../public" + file));
