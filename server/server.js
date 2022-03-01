@@ -34,6 +34,9 @@ app.get("/styles", (req, res) => {
 app.get("/helper", (req, res) => {
   res.sendFile(path.join(__dirname, "../helper.css"));
 });
+app.get("/reset", (req, res) => {
+  res.sendFile(path.join(__dirname, "../reset.css"));
+});
 app.get("/ticket-select", (req, res) => {
   res.sendFile(path.join(__dirname, "../qty-select.js"));
 });
