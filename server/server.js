@@ -63,10 +63,10 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../index.html"));
 });
 
-app.post("/api/users", createUser);
-app.post("/api/login", userLogin);
-app.post("/api/trips", createTrip);
-app.post("/api/getTrips", getTrips);
-app.delete("/api/deleteTrip", deleteTrip);
+app.post("/users", createUser);
+app.post("/login", userLogin);
+app.post("/trips", createTrip);
+app.post("/getTrips", getTrips);
+app.delete("/deleteTrip", deleteTrip);
 
 app.listen(PORT, () => console.log(`up on ${PORT}`));
