@@ -22,10 +22,10 @@ app.get("/index", (req, res) => {
 app.get("/booking", (req, res) => {
   res.sendFile(path.join(__dirname, "../booking.html"));
 });
-app.get("/script", (req, res) => {
+app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../script.js"));
 });
-app.get("/booking", (req, res) => {
+app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../booking.js"));
 });
 app.get("/styles", (req, res) => {
@@ -38,9 +38,9 @@ app.get("/reset", (req, res) => {
   res.sendFile(path.join(__dirname, "../reset.css"));
 });
 
-// app.get("/", (req, res) => {
-//   res.sendFile(path.join(__dirname, "../index.html"));
-// });
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "../index.html"));
+});
 
 app.post("/api/users", createUser);
 app.post("/api/login", userLogin);
