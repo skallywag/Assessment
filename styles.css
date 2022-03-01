@@ -166,38 +166,31 @@ html * {
   border-style: none;
 }
 
-/* video {
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-  } */
-
-.video-wrapper {
+video {
   object-fit: cover;
   height: 100%;
   width: 100%;
-  position: fixed;
+
+  position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
+}
+
+.video-wrapper {
   /* Telling our absolute positioned video to 
     be relative to this element */
-  /* position: relative;
-    width: 100vw;
-    height:100vh;
-   */
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+
   /* Will not allow the video to overflow the 
     container */
-  /* overflow: hidden; */
+  overflow: hidden;
 
   /* Centering the container's content vertically 
     and horizontally */
   /* text-align: center; */
-  /* display: flex; */
+  display: flex;
   /* align-items: center; */
   /* justify-content: center; */
 }
