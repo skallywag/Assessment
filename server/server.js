@@ -25,8 +25,8 @@ app.get("/booking", (req, res) => {
 app.get("/script", (req, res) => {
   res.sendFile(path.join(__dirname, "../script.js"));
 });
-app.get("/booking", (req, res) => {
-  res.sendFile(path.join(__dirname, "../booking.js"));
+app.get("/bookings", (req, res) => {
+  res.sendFile(path.join(__dirname, "../bookings.js"));
 });
 app.get("/styles", (req, res) => {
   res.sendFile(path.join(__dirname, "../styles.css"));
