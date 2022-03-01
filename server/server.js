@@ -53,6 +53,12 @@ app.get(
     res.sendFile(path.join(__dirname, "../citySelect.css"));
   }
 );
+app.get(
+  "https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css",
+  (req, res) => {
+    res.sendFile(path.join(__dirname, "../citySelect.css"));
+  }
+);
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../index.html"));
