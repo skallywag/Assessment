@@ -38,9 +38,9 @@ app.get("/reset", (req, res) => {
   res.sendFile(path.join(__dirname, "../reset.css"));
 });
 
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../index.html"));
-});
+// app.get("/", (req, res) => {
+//   res.sendFile(path.join(__dirname, "../index.html"));
+// });
 
 app.post("/api/users", createUser);
 app.post("/api/login", userLogin);
