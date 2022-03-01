@@ -28,7 +28,7 @@ let files = [
   "/css/reset.css",
 ];
 app.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname, "/p.html"));
+  res.sendFile(path.join(__dirname, "/public/index.html"));
 });
 app.get("*", function (req, res) {
   console.log("hey im getting hit bro");
