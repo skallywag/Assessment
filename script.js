@@ -15,7 +15,7 @@ function closeForm() {
   }
 
   const loginForm = document.querySelector(".login-con");
-  console.log(loginForm);
+  // console.log(loginForm);
   if (loginForm.style.display === "flex") {
     loginForm.style.display = "none";
   }

@@ -34,8 +34,17 @@ app.get("/styles", (req, res) => {
 app.get("/helper", (req, res) => {
   res.sendFile(path.join(__dirname, "../helper.css"));
 });
-app.get("/reset", (req, res) => {
-  res.sendFile(path.join(__dirname, "../reset.css"));
+app.get("/ticket-select", (req, res) => {
+  res.sendFile(path.join(__dirname, "../ticket-select/qty-select.css"));
+});
+app.get("/ticket-select", (req, res) => {
+  res.sendFile(path.join(__dirname, "../ticket-select/qty-select.js"));
+});
+app.get("/city-select", (req, res) => {
+  res.sendFile(path.join(__dirname, "../city-select.css"));
+});
+app.get("/city-select", (req, res) => {
+  res.sendFile(path.join(__dirname, "../city-select.js"));
 });
 
 app.get("/", (req, res) => {
