@@ -35,10 +35,10 @@ app.get("/helper", (req, res) => {
   res.sendFile(path.join(__dirname, "../helper.css"));
 });
 app.get("/ticket-select", (req, res) => {
-  res.sendFile(path.join(__dirname, "../ticket-select/qty-select.css"));
+  res.sendFile(path.join(__dirname, "../qty-select.css"));
 });
 app.get("/ticket-select", (req, res) => {
-  res.sendFile(path.join(__dirname, "../ticket-select/qty-select.js"));
+  res.sendFile(path.join(__dirname, "../qty-select.js"));
 });
 app.get("/city-select", (req, res) => {
   res.sendFile(path.join(__dirname, "../city-select.css"));
