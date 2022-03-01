@@ -25,6 +25,9 @@ app.get("/booking", (req, res) => {
 app.get("/script", (req, res) => {
   res.sendFile(path.join(__dirname, "../script.js"));
 });
+app.get("/pictures/earthLoop.mp4", (req, res) => {
+  res.sendFile(path.join(__dirname, "../pictures/earthLoop.mp4"));
+});
 app.get("/bookings", (req, res) => {
   res.sendFile(path.join(__dirname, "../bookings.js"));
 });
